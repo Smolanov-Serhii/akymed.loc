@@ -1,0 +1,217 @@
+@import "fonts";
+@import "normalize";
+@import "aos";
+@import "preloader";
+@import "fresco";
+@import "swiper-bundle";
+@import "swiper-gl";
+@import "selectric";
+@import "default";
+$transition: 0.2s;
+$px: 0.0625;
+$pxm: 0.3125;
+
+// GENERAL DOCUMENT STYLES
+* {
+  box-sizing: border-box;
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  font-feature-settings: 'pnum' on, 'lnum' on;
+}
+html{
+  font-family: 'FuturaPT-Book', sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  @media all and (max-width: 1600px){
+    font-size: 9px;
+  }
+  @media all and (max-width: 1400px){
+
+  }
+  @media all and (max-width: 1200px){
+    font-size: 8px;
+  }
+  @media all and (max-width: 1024px){
+
+  }
+  @media all and (max-width: 768px){
+
+  }
+  @media all and (max-width: 500px){
+
+  }
+}
+body{
+  background-color: #FEF4E3;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  &.error404{
+    .footer{
+      background-color: transparent;
+    }
+  }
+  &.search{
+    .footer{
+      background-color: transparent;
+    }
+  }
+}
+
+.rotation {
+  display: inline-block;
+  animation: 14s linear 0s normal none infinite running rot;
+  -webkit-animation: 14s linear 0s normal none infinite running rot;
+}
+@keyframes rot {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes rot {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.locked{
+  overflow: hidden;
+}
+img{
+  max-width: 100%;
+}
+main{
+  flex: 1;
+  overflow: hidden;
+  width: 100%;
+}
+.padding-right{
+  padding-right: 169px;
+  @media all and (max-width: 1600px){
+    padding-right: 150px;
+  }
+  @media all and (max-width: 1400px){
+    padding-right: 125px;
+  }
+  @media all and (max-width: 1200px){
+    padding-right: 100px;
+  }
+  @media all and (max-width: 1024px){
+    padding-right: 75px;
+  }
+  @media all and (max-width: 768px){
+    padding-right: 50px;
+  }
+  @media all and (max-width: 500px){
+    padding-right: 20px;
+  }
+}
+.padding-left{
+  padding-left: 169px;
+  @media all and (max-width: 1600px){
+    padding-left: 150px;
+  }
+  @media all and (max-width: 1400px){
+    padding-left-right: 125px;
+  }
+  @media all and (max-width: 1200px){
+    padding-left: 100px;
+  }
+  @media all and (max-width: 1024px){
+    padding-left: 75px;
+  }
+  @media all and (max-width: 768px){
+    padding-left: 50px;
+  }
+  @media all and (max-width: 500px){
+    padding-left: 20px;
+  }
+}
+.main-container{
+  max-width: 1920px;
+  margin: auto;
+  @extend .padding-left;
+  @extend .padding-right;
+}
+.big-container{
+  max-width: 1920px;
+  margin: auto;
+  padding-left: 40px;
+  padding-right: 40px;
+  @media all and (max-width: 500px){
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+}
+.full-container{
+  width: 100%;
+  max-width: 1920px;
+  margin: auto;
+}
+.section-title{
+  font-family: 'Playfair Display';
+  font-size: 4rem;
+  line-height: 4.7rem;
+  text-transform: uppercase;
+  color: #191919;
+  font-weight: 600;
+  @media all and (max-width: 500px){
+    font-size: 30px;
+    margin-bottom: 41px;
+  }
+  @media all and (max-width: 400px){
+    font-size: 24px;
+  }
+  i{
+    text-transform: none;
+    font-style: italic;
+  }
+}
+.section-subtitle{
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 159%;
+  color: #000000;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 3rem;
+  max-width: 776px;
+}
+.big-title{
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 11.1rem;
+  line-height: 11.8rem;
+  text-transform: uppercase;
+  color: #191919;
+  margin-bottom: 1.125vw;
+}
+.block-title{
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+  text-transform: uppercase;
+  color: #191919;
+  i{
+    text-transform: none;
+    font-style: italic;
+  }
+}
+
+
+@import "templates/header";
+
+@import "templates/main";
+
+@import "templates/footer";
