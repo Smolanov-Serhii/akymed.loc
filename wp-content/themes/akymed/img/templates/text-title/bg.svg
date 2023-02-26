@@ -1,0 +1,23 @@
+<svg width="1920" height="445" viewBox="0 0 1920 445" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.6">
+<g style="mix-blend-mode:overlay" opacity="0.07">
+<circle cx="961.434" cy="-424.566" r="869.434" fill="white"/>
+</g>
+<g style="mix-blend-mode:overlay" opacity="0.07">
+<circle cx="961.435" cy="-424.566" r="739.562" fill="white"/>
+</g>
+<g style="mix-blend-mode:overlay" opacity="0.07">
+<circle cx="961.435" cy="-424.566" r="614.701" fill="white"/>
+</g>
+<g style="mix-blend-mode:overlay" opacity="0.07">
+<circle cx="961.435" cy="-424.566" r="490.675" fill="white"/>
+</g>
+</g>
+<rect width="1920" height="445" fill="url(#paint0_linear_722_3418)"/>
+<defs>
+<linearGradient id="paint0_linear_722_3418" x1="960" y1="0" x2="960" y2="445" gradientUnits="userSpaceOnUse">
+<stop stop-color="#003057" stop-opacity="0.9"/>
+<stop offset="1" stop-color="#003057" stop-opacity="0"/>
+</linearGradient>
+</defs>
+</svg>
