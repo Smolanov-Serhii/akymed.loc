@@ -1,0 +1,100 @@
+.request{
+  background-color: rgba(194,214,229,0.2);
+  padding-top: 6.7rem;
+  padding-bottom: 13rem;
+  &__container{
+
+  }
+  &__subtitle{
+    max-width: 584px;
+    margin: auto;
+  }
+  &__wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 6.5rem;
+  }
+  &__left{
+    width: calc(50% - 20px);
+    &-item{
+      display: flex;
+      text-decoration: none;
+      margin-bottom: 1.5rem;
+      &:last-child{
+        margin-bottom: 0;
+      }
+      svg{
+        width: 24px;
+        height: 24px;
+        margin-right: 2.6rem;
+        margin-top: -4px;
+      }
+      p{
+        width: calc(100% - (24px + 2.6rem));
+        margin-bottom: 0;
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 130%;
+        color: #1B1B1B;
+      }
+    }
+    .wpcf7{
+      margin-top: 3.8rem;
+      .wpcf7-spinner{
+        display: none!important;
+      }
+      p{
+        margin-bottom: 0;
+      }
+      label{
+        font-weight: 400;
+        font-size: 1.2rem;
+        line-height: 130%;
+        color: #003057;
+        margin-bottom: 1.5rem;
+        width: 100%;
+        opacity: 0.5;
+        display: block;
+      }
+      input, textarea{
+        margin-top: 0.9rem;
+        background: #FFFFFF;
+        border: 1px solid #003057;
+        border-radius: 5px;
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 130%;
+        color: #1B1B1B;
+        padding: 1rem 1.4rem;
+        width: 100%;
+      }
+      textarea{
+        height: 11rem;
+        resize: none;
+      }
+      .wpcf7-submit{
+        margin-top: 3.4rem;
+        background: #00B2A9;
+        box-shadow: 0px 13px 30px -13px rgba(0, 178, 169, 0.3);
+        border-radius: 5.1rem;
+        font-weight: 600;
+        font-size: 1.6rem;
+        line-height: 130%;
+        color: #FFFFFF;
+        padding: 2.1rem;
+        min-width: 28.4rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        width: auto;
+      }
+    }
+  }
+  &__map{
+    width: calc(50% - 20px);
+    border-radius: 20px;
+    overflow: hidden;
+  }
+}
