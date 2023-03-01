@@ -64,5 +64,11 @@ $(document).ready(function () {
         };
         $(document).ready(initializeContactsMap);
     }
+
+    if ($("section.team").length){
+        $(".team__item-header").click(function () {
+            $(this).closest('.team__item').toggleClass('active').find('.team__item-wrapper').fadeToggle(300);
+        });
+    }
 });
 

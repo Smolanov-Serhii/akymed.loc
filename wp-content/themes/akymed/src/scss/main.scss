@@ -144,6 +144,11 @@ main{
   letter-spacing: 0.02em;
   color: #1B1B1B;
   text-align: center;
+  &-red{
+    font-weight: 700;
+    color: #FF6A13;
+    text-align: center;
+  }
 }
 .banner-title{
   font-weight: 800;
@@ -200,5 +205,7 @@ main{
 @import "templates/two-column";
 @import "templates/two-column-img";
 @import "templates/publication";
+@import "templates/banner-double";
+@import "templates/team";
 
 @import "templates/footer";
