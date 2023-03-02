@@ -148,6 +148,12 @@ table{
       }
       th{
         background: rgba(194, 214, 229, 0.31);
+        &:first-child{
+          border-radius: 5px 0 0 5px;
+        }
+        &:last-child{
+          border-radius: 0 5px 5px 0;
+        }
       }
     }
   }

@@ -56,6 +56,21 @@ $post_id = get_the_ID();
                 </div>
             </div>
         </section>
+        <section class="text-img main-container">
+            <div class="text-img__container">
+                <div class="text-img__img">
+                    <img src="<?php echo get_template_directory_uri() . '/img/templates/text-img/img.png'?>" alt="">
+                </div>
+                <h2 class="text-img__title section-title">
+                    QC-Beads
+                </h2>
+                <div class="text-img__content text">
+                    <p>Quality control (QC) of semen analysis is essential for the detection and correction of systematic errors and high variability.</p>
+                    <p>For manual counting, the QC-Beads can be used to evaluate technician techniques, counting protocols and counting chambers.</p>
+                    <p>For automated counting, the QC-Beads can be used to evaluate the performance of the optical system and the resulting computer image processing of an automated semen analyzer.</p>
+                </div>
+            </div>
+        </section>
         <?php get_template_part( 'template-parts/content', 'request' ); ?>
 
 	</main>
