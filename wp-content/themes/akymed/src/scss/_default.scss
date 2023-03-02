@@ -94,8 +94,7 @@ h6{
 table{
   width: 100%;
   border-collapse:separate;
-  border-spacing:0 16px;
-  margin-bottom: 38px;
+  margin-bottom: 3rem;
   th{
     font-weight: 400;
     padding: 19px 26px;
@@ -108,10 +107,10 @@ table{
   }
   th, td{
     font-weight: 400;
-    font-size: 16px;
-    line-height: 19px;
+    font-size: 1.6rem;
+    line-height: 125%;
     color: #616BA0;
-    padding: 26px;
+    padding: 1.2rem 2rem;
     text-align: left;
     @media all and (max-width: 768px){
       padding: 12px 28px;
@@ -124,12 +123,10 @@ table{
   }
   tbody{
     tr{
-      background: rgba(255, 255, 255, 0.5);
       border-radius: 10px;
-      &:nth-child(even){
-        td{
-          background: rgba(230, 232, 241, 0.5);
-        }
+      transition: 0.2s;
+      &:hover{
+        background: rgba(0, 48, 87, 0.03);
       }
       td{
         &:first-child{
@@ -138,20 +135,19 @@ table{
         &:last-child{
           border-radius: 0 10px 10px 0;
         }
-        border-top: 1px solid #E6E8F1;
-        border-bottom: 1px solid #E6E8F1;
+        border-bottom: 1px dashed #C2D6E5;
         &:first-child{
-          border-left: 1px solid #E6E8F1;
+
         }
         &:last-child{
-          border-right: 1px solid #E6E8F1;
+
         }
         img{
           margin-right: 14px;
         }
       }
-      &:nth-child(even){
-
+      th{
+        background: rgba(194, 214, 229, 0.31);
       }
     }
   }
