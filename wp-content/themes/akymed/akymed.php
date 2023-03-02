@@ -34,7 +34,7 @@ $post_id = get_the_ID();
             </div>
         </section>
         <section class="team">
-            <div class="team__container main-container">
+            <div class="team__container main-container text">
                 <h2 class="team__title section-title">
                     The AKYmed team
                 </h2>

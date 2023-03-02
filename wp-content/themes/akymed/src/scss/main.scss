@@ -160,6 +160,13 @@ main{
     color: #00B2A9;
   }
 }
+.banner-subtitle{
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 130%;
+  text-align: center;
+  color: #FFFFFF;
+}
 .button{
   border-radius: 5.1rem;
   min-width: 28.4rem;
@@ -208,5 +215,7 @@ main{
 @import "templates/banner-double";
 @import "templates/team";
 @import "templates/404";
+@import "templates/banner-grid";
 
 @import "templates/footer";
+
