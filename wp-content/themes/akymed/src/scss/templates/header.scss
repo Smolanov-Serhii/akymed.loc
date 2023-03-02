@@ -93,7 +93,7 @@
       justify-content: center;
       align-items: center;
       &-item{
-        margin: 0 4rem;
+        margin: 0 3.6rem;
         transition: all 0.5s ease;
         border-bottom: 2px solid transparent;
         @media all and (max-width: 1600px){
@@ -102,8 +102,82 @@
         @media all and (max-width: 1440px){
           margin: 0 2rem;
         }
-        &.current_page_item, &:hover{
+        &.menu-item-has-children{
+          position: relative;
+          > a{
+            pointer-events: none;
+            cursor: pointer;
+          }
+          &:after{
+            position: absolute;
+            top: calc(50% - 6px);
+            right: 0;
+            content: "";
+            display: block;
+            width: 6px;
+            height: 6px;
+            border-right: 1px solid #FFFFFF;
+            border-top: 1px solid #FFFFFF;
+            transform: rotate(135deg);
+          }
+          &:hover{
+            &:after{
+              top: calc(50% - 3px);
+              transform: rotate(-45deg);
+            }
+            .sub-menu{
+              display: block;
+            }
+          }
+          .sub-menu{
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: linear-gradient(180deg, #003057 0%, #003057 100%);
+            padding: 1.6rem 0 1.6rem 0;
+            border-top: 2px solid #FF6A13;
+            .menu-item{
+              margin: 0;
+              border-bottom: none!important;
+              margin-bottom: 1.6rem;
+              &:hover{
+                a{
+                  color: #00B2A9;
+                }
+              }
+              &.current_page_item{
+                a{
+                  color: #00B2A9;
+                }
+              }
+              &:last-child{
+                margin-bottom: 0;
+              }
+              a{
+                font-weight: 400;
+                font-size: 1.4rem;
+                line-height: 100%;
+                color: #C2D6E5;
+                white-space: nowrap;
+                padding: 0 1.6rem;
+                text-transform: none;
+              }
+            }
+          }
+        }
+        &.current_page_item, &.current-menu-parent{
           border-bottom: 2px solid #FF6A13;
+          &:hover{
+            > a{
+              color: #C2D6E5;
+            }
+          }
+        }
+        &:hover{
+          > a{
+            color: #00B2A9;
+          }
         }
         a{
           text-decoration: none;
@@ -112,8 +186,9 @@
           line-height: 102.5%;
           text-transform: uppercase;
           color: #FFFFFF;
-          padding: 1.6rem 0.8rem;
+          padding: 1.6rem 1.6rem;
           display: inline-block;
+          transition: $transition;
           @media all and (max-width: 1600px){
 
           }
