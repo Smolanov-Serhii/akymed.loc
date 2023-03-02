@@ -9,6 +9,11 @@
     color: #FFFFFF;
     max-width: 64.3rem;
     margin: auto;
+    span{
+      display: block;
+      text-align: center;
+      margin-bottom: 1.4rem;
+    }
   }
   &__bg{
     position: absolute;
@@ -51,41 +56,52 @@
     margin-bottom: 2rem;
     width: calc(50% - 1rem);
     padding: 3rem 4rem 2.4rem 4rem;
+    &:not(.banner-grid__item-column){
+      &:first-child{
+        width: 100%;
+        ul{
+          display: grid;
+          column-gap: 5.3rem;
+          grid-template-columns: 1fr 2fr 1fr;
+          li{
+            padding-right: 5.3rem;
+            white-space: nowrap;
+            &:nth-child(1){
+              order: 1;
+            }
+            &:nth-child(2){
+              order: 4;
+            }
+            &:nth-child(3){
+              order: 2;
+            }
+            &:nth-child(4){
+              order: 5;
+            }
+            &:nth-child(5){
+              order: 3;
+            }
+            &:nth-child(6){
+              order: 6;
+            }
+          }
+        }
+      }
+    }
+    &-column{
+      max-width: 70.8rem;
+      width: 100%;
+      margin: 0 auto 14.9rem auto;
+      ul{
+        display: block;
+        column-count: 2;
+      }
+    }
     ul{
       margin-bottom: 0;
     }
     li{
       color: #FFFFFF;
-    }
-    &:first-child{
-      width: 100%;
-      ul{
-        display: grid;
-        column-gap: 5.3rem;
-        grid-template-columns: 1fr 2fr 1fr;
-        li{
-          padding-right: 5.3rem;
-          white-space: nowrap;
-          &:nth-child(1){
-            order: 1;
-          }
-          &:nth-child(2){
-            order: 4;
-          }
-          &:nth-child(3){
-            order: 2;
-          }
-          &:nth-child(4){
-            order: 5;
-          }
-          &:nth-child(5){
-            order: 3;
-          }
-          &:nth-child(6){
-            order: 6;
-          }
-        }
-      }
     }
     &-tag{
       background: #00B2A9;
