@@ -1,3 +1,36 @@
+@keyframes rot {
+  0% {
+    transform: rotate(0deg);
+  }
+  20%{
+    opacity: 1;
+  }
+  20.3%{
+    opacity: 0;
+  }
+  31.9%{
+    opacity: 0;
+  }
+  32.4%{
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes rot {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.rotation {
+  display: inline-block;
+  animation: 14s linear 0s normal none infinite running rot;
+  -webkit-animation: 14s linear 0s normal none infinite running rot;
+}
 .header{
   background-color: transparent;
   position: fixed;
@@ -14,12 +47,17 @@
   &.moved{
     background-color: #003057;
     .header__logo{
-      img{
+      &-main{
         width: 70%;
         @media all and (max-width: 1024px){
           width: auto;
         }
       }
+    }
+    .header__logo-move{
+      left: -2px;
+      top: -2px;
+      height: calc(100% + 4px);
     }
   }
   &__container{
@@ -29,6 +67,16 @@
   }
   &__logo{
     width: 10%;
+    .header__logo-container{
+      display: inline-block;
+      position: relative;
+    }
+    .header__logo-move{
+      position: absolute;
+      left: -4px;
+      top: -4px;
+      height: calc(100% + 8px);
+    }
     img{
       height: auto;
       transition: all 0.5s ease;
