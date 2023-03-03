@@ -167,14 +167,12 @@
           }
         }
         &.current_page_item, &.current-menu-parent{
-          border-bottom: 2px solid #FF6A13;
-          &:hover{
-            > a{
-              color: #C2D6E5;
-            }
+          a{
+            color: #00B2A9;
           }
         }
         &:hover{
+          border-bottom: 2px solid #FF6A13;
           > a{
             color: #00B2A9;
           }

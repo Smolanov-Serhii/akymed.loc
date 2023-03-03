@@ -4,6 +4,14 @@
   padding-top: 19.8rem;
   min-height: 44.5rem;
   position: relative;
+  &-img{
+    padding-bottom: 40.8rem;
+    margin-bottom: -37rem;
+    z-index: -1;
+    .text-title__subtitle{
+      max-width: 100.7rem;
+    }
+  }
   &__bg{
     position: absolute;
     top: 0;
