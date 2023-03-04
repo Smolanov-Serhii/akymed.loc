@@ -46,7 +46,7 @@
 	<header id="header" class="header default">
         <div class="header__container big-container">
             <div class="header__logo">
-                <a class="header__logo-container" href="<?php get_home_url()?>">
+                <a class="header__logo-container" href="<?php echo get_home_url()?>">
                     <img class="header__logo-move rotation" src="<?php echo get_template_directory_uri() . '/img/templates/header/logo-move.svg'?>" alt="">
                     <img class="header__logo-main" src="<?php echo get_template_directory_uri() . '/img/templates/header/logo.svg'?>" alt="">
                 </a>
