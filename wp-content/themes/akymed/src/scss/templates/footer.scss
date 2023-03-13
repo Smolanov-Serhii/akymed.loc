@@ -79,6 +79,11 @@
           line-height: 102.5%;
           color: #003057;
           pointer-events: none;
+          &.shoved{
+            &:before{
+              display: none;
+            }
+          }
           @media all and (max-width: 1024px){
             margin-bottom: 10px;
           }

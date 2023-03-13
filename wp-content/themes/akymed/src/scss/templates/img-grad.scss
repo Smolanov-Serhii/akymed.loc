@@ -1,6 +1,10 @@
 .img-grad{
   margin-top: 7.9rem;
   margin-bottom: 10.5rem;
+  @media all and (max-width: 500px){
+    margin-bottom: 60px;
+    margin-top: 60px;
+  }
   &__container{
 
   }
@@ -18,8 +22,17 @@
     flex-wrap: wrap;
     margin-bottom: 7.9rem;
     overflow: hidden;
+    @media all and (max-width: 768px){
+      flex-direction: column-reverse;
+    }
+    @media all and (max-width: 500px){
+      margin-bottom: 20px;
+    }
     &:nth-child(even){
       flex-direction: row-reverse;
+      @media all and (max-width: 768px){
+        flex-direction: column-reverse;
+      }
       .img-grad__img{
         &:after{
           background: linear-gradient(270deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 86.29%);
@@ -30,10 +43,19 @@
   &__wrapper{
     width: 50%;
     padding: 6.3rem 4rem 5.2rem 6.8rem;
+    @media all and (max-width: 768px){
+      width: 100%;
+    }
+    @media all and (max-width: 500px){
+      padding: 40px 20px 20px 20px;
+    }
   }
   &__img{
     position: relative;
     width: 50%;
+    @media all and (max-width: 768px){
+      width: 100%;
+    }
     img{
       object-fit: cover;
       object-position: center;

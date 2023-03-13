@@ -23,25 +23,25 @@ $post_id = get_the_ID();
                     <img src="<?php echo get_template_directory_uri() . '/img/templates/banner-double/first.jpg'?>" alt="">
                 </div>
                 <div class="main-container">
-                    <h1 class="banner-double__title banner-title">
+                    <h1 class="banner-double__title banner-title" data-aos="fade-up" data-aos-delay="200">
                         AKYmed is a Swiss company founded in 2019
                     </h1>
-                    <p class="banner-double__subtitle section-subtitle">AKYmed is active in the field of human and animal male fertility analyses, selling patented QualiSperm CASA systems and associated hardware and consumables. To further strengthen its position on the animal market and expand its portfolio, AKYmed introduced innovative services and products under the brand name of Noah Genetics. Noah Genetics toolbox comprises a panel of artificial insemination (AI) services for the animal artificial reproduction industry. These services can be regrouped under 3 themes: diagnostic, optimization, and preservation. Noah Genetics targets customers that routinely rely on animal AI in their activities, such actors in the husbandry industry (livestock farmers & fish farmers), the companion animal industry, and the conservation industry.</p>
+                    <p class="banner-double__subtitle section-subtitle"  data-aos="fade-up" data-aos-delay="500">AKYmed is active in the field of human and animal male fertility analyses, selling patented QualiSperm CASA systems and associated hardware and consumables. To further strengthen its position on the animal market and expand its portfolio, AKYmed introduced innovative services and products under the brand name of Noah Genetics. Noah Genetics toolbox comprises a panel of artificial insemination (AI) services for the animal artificial reproduction industry. These services can be regrouped under 3 themes: diagnostic, optimization, and preservation. Noah Genetics targets customers that routinely rely on animal AI in their activities, such actors in the husbandry industry (livestock farmers & fish farmers), the companion animal industry, and the conservation industry.</p>
                 </div>
             </div>
-            <div class="banner-double__two">
+            <div class="banner-double__two"  data-aos="fade-up" data-aos-delay="800">
                 <img src="<?php echo get_template_directory_uri() . '/img/templates/banner-double/second.jpg'?>" alt="">
             </div>
         </section>
         <section class="team">
             <div class="team__container main-container text">
-                <h2 class="team__title section-title">
+                <h2 class="team__title section-title" data-aos="fade-up" data-aos-delay="200">
                     The AKYmed team
                 </h2>
-                <p class="team__subtitle section-subtitle">The AKYmed core team is a unique blend of experts in healthcare strategy, technology and operations with a mission to significantly change the way male fertility testing is done today. Seeing technology put to work and helping people every day is our passion. We stand behind our core values of</p>
-                <p class="team__subtitle section-subtitle-red">RESPONSIBILITIY – FUN – TRANSPARENCY – ENGAGEMENT</p>
+                <p class="team__subtitle section-subtitle" data-aos="fade-up" data-aos-delay="500">The AKYmed core team is a unique blend of experts in healthcare strategy, technology and operations with a mission to significantly change the way male fertility testing is done today. Seeing technology put to work and helping people every day is our passion. We stand behind our core values of</p>
+                <p class="team__subtitle section-subtitle-red" data-aos="fade-up" data-aos-delay="800">RESPONSIBILITIY – FUN – TRANSPARENCY – ENGAGEMENT</p>
                 <div class="team__list">
-                    <div class="team__item">
+                    <div class="team__item" data-aos="fade-right" data-aos-delay="200">
                         <div class="team__item-img">
                             <img src="<?php echo get_template_directory_uri() . '/img/templates/team/1.jpg'?>" alt="Yulia Karlova">
                         </div>
@@ -82,7 +82,7 @@ $post_id = get_the_ID();
                             </div>
                         </div>
                     </div>
-                    <div class="team__item">
+                    <div class="team__item" data-aos="fade-right" data-aos-delay="200">
                         <div class="team__item-img">
                             <img src="<?php echo get_template_directory_uri() . '/img/templates/team/2.jpg'?>" alt="Alexandre Karlov">
                         </div>
@@ -120,7 +120,7 @@ $post_id = get_the_ID();
                             </div>
                         </div>
                     </div>
-                    <div class="team__item">
+                    <div class="team__item" data-aos="fade-right" data-aos-delay="200">
                         <div class="team__item-img">
                             <img src="<?php echo get_template_directory_uri() . '/img/templates/team/3.jpg'?>" alt="Alexandre Karlov">
                         </div>
@@ -158,7 +158,7 @@ $post_id = get_the_ID();
                             </div>
                         </div>
                     </div>
-                    <div class="team__item">
+                    <div class="team__item" data-aos="fade-right" data-aos-delay="200">
                         <div class="team__item-img">
                             <img src="<?php echo get_template_directory_uri() . '/img/templates/team/4.jpg'?>" alt="Alexandre Karlov">
                         </div>
@@ -196,7 +196,7 @@ $post_id = get_the_ID();
                             </div>
                         </div>
                     </div>
-                    <div class="team__item">
+                    <div class="team__item" data-aos="fade-right" data-aos-delay="200">
                         <div class="team__item-img">
                             <img src="<?php echo get_template_directory_uri() . '/img/templates/team/5.jpg'?>" alt="Alexandre Karlov">
                         </div>
@@ -234,7 +234,7 @@ $post_id = get_the_ID();
                             </div>
                         </div>
                     </div>
-                    <div class="team__item">
+                    <div class="team__item" data-aos="fade-right" data-aos-delay="200">
                         <div class="team__item-img">
                             <img src="<?php echo get_template_directory_uri() . '/img/templates/team/6.jpg'?>" alt="Alexandre Karlov">
                         </div>

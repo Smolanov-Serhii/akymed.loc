@@ -22,17 +22,17 @@ $post_id = get_the_ID();
                 <img src="<?php echo get_template_directory_uri() . '/img/templates/text-title/bg.svg'?>" alt="">
             </div>
             <div class="text-title__container main-container">
-                <h1 class="text-title__title banner-title">
+                <h1 class="text-title__title banner-title" data-aos="fade-up" data-aos-delay="200">
                     Contact AKYmed
                 </h1>
-                <p class="text-title__subtitle banner-subtitle">Contact us today and one of our consultants will help you find the right <br>solution for your business.</p>
+                <p class="text-title__subtitle banner-subtitle" data-aos="fade-up" data-aos-delay="400">Contact us today and one of our consultants will help you find the right <br>solution for your business.</p>
             </div>
         </section>
         <section class="contacts">
             <?php echo do_shortcode('[contact-form-7 id="89" title="contacts page"]');?>
             <div class="contacts__container contacts__bottom">
                 <div class="main-container">
-                    <div class="contacts__map" id="map">
+                    <div class="contacts__map" id="map" data-aos="fade-up" data-aos-delay="600">
 
                     </div>
                     <div class="contacts__links">

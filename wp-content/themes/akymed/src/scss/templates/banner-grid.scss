@@ -56,6 +56,12 @@
     margin-bottom: 2rem;
     width: calc(50% - 1rem);
     padding: 3rem 4rem 2.4rem 4rem;
+    @media all and (max-width: 768px){
+      width: 100%;
+    }
+    @media all and (max-width: 500px){
+      padding: 20px;
+    }
     &:not(.banner-grid__item-column){
       &:first-child{
         width: 100%;
@@ -63,9 +69,19 @@
           display: grid;
           column-gap: 5.3rem;
           grid-template-columns: 1fr 2fr 1fr;
+          @media all and (max-width: 1200px){
+            grid-template-columns: 1fr 1fr;
+          }
+          @media all and (max-width: 768px){
+            display: flex;
+            flex-direction: column;
+          }
           li{
             padding-right: 5.3rem;
             white-space: nowrap;
+            @media all and (max-width: 1024px){
+              white-space: normal;
+            }
             &:nth-child(1){
               order: 1;
             }
@@ -92,9 +108,15 @@
       max-width: 70.8rem;
       width: 100%;
       margin: 0 auto 14.9rem auto;
+      @media all and (max-width: 768px){
+        margin-bottom: 0;
+      }
       ul{
         display: block;
         column-count: 2;
+        @media all and (max-width: 768px){
+          column-count: 1;
+        }
       }
     }
     ul{
@@ -102,6 +124,11 @@
     }
     li{
       color: #FFFFFF;
+      @media all and (max-width: 500px){
+        &:last-child{
+          margin-bottom: 0;
+        }
+      }
     }
     &-tag{
       background: #00B2A9;
@@ -113,6 +140,9 @@
       color: #FFFFFF;
       margin-bottom: 2.9rem;
       display: inline-block;
+      @media all and (max-width: 500px){
+        display: block;
+      }
     }
   }
 }

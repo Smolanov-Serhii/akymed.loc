@@ -71,5 +71,24 @@
                 <span></span>
                 <span></span>
             </div>
+            <div class="header__mobile-menu">
+                <div class="header__mobile-menu-wrapper">
+                    <nav id="header__nav" class="header__nav">
+                        <?php
+                        wp_nav_menu(
+                            array(
+                                'theme_location' => 'main-menu',
+                                'menu_id'        => 'main-menu',
+                            )
+                        );
+                        ?>
+                    </nav>
+                    <div class="header__language">
+                        <?php
+                        qtranxf_generateLanguageSelectCode('short');
+                        ?>
+                    </div>
+                </div>
+            </div>
         </div>
 	</header>

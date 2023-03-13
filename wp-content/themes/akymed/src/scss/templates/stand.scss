@@ -1,6 +1,9 @@
 .stand{
   padding-top: 8rem;
   margin-bottom: 7.9rem;
+  @media all and (max-width: 500px){
+    margin-bottom: 20px;
+  }
   &__title{
     margin-bottom: 2.5rem;
   }
@@ -24,6 +27,10 @@
     width: calc(50% - 1rem);
     border-radius: 15px;
     overflow: hidden;
+    @media all and (max-width: 768px){
+      width: 100%;
+      margin-bottom: 20px;
+    }
     &:first-child{
       background-color: #FF6A13;
     }

@@ -70,5 +70,24 @@ $(document).ready(function () {
             $(this).closest('.team__item').toggleClass('active').find('.team__item-wrapper').fadeToggle(300);
         });
     }
+    if ($(".header__burger").length){
+        $(".header__burger").click(function () {
+            // $('.header').addClass('moved');
+            $('body').toggleClass('locked');
+            $('.header__mobile-menu').toggleClass('active');
+        });
+        $(".header__mobile-menu .menu-item-has-children > a").click(function () {
+            // event.preventDefault();
+            $(this).closest('.menu-item-has-children').find('.sub-menu').fadeToggle(300);
+        });
+        if (window.innerWidth < 1025) {
+            $(".menu-footer-menu-container .menu-item-has-children > a").click(function () {
+                // console.log('+');
+                event.preventDefault();
+                $(this).toggleClass('shoved');
+                $(this).closest('.menu-item-has-children').find('.sub-menu').fadeToggle(300);
+            });
+        }
+    }
 });
 

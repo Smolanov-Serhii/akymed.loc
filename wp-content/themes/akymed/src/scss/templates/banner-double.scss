@@ -3,6 +3,11 @@
     position: relative;
     padding-top: 27.2rem;
     padding-bottom: 19.7rem;
+    @media all and (max-width: 500px){
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+    }
   }
   &__bg{
     position: absolute;

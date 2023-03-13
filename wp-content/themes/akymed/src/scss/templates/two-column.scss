@@ -18,6 +18,16 @@
     border-radius: 15px;
     padding: 3.9rem 5.2rem;
     margin-bottom: 2.6rem;
+    @media all and (max-width: 768px){
+      width: 100%;
+      padding: 35px;
+    }
+    @media all and (max-width: 500px){
+      padding: 20px;
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
     &-title{
       font-weight: 600;
       font-size: 2.4rem;
