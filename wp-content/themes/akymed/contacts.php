@@ -32,7 +32,7 @@ $post_id = get_the_ID();
             <?php echo do_shortcode('[contact-form-7 id="89" title="contacts page"]');?>
             <div class="contacts__container contacts__bottom">
                 <div class="main-container">
-                    <div class="contacts__map" id="map" data-aos="fade-up" data-aos-delay="600">
+                    <div class="contacts__map" id="map" data-aos="fade-up" data-aos-delay="600" data-marker="<?php echo get_template_directory_uri() . '/img/templates/map/marker.svg'?>">
 
                     </div>
                     <div class="contacts__links">

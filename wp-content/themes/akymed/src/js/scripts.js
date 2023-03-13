@@ -32,37 +32,59 @@ $(document).ready(function () {
     });
 
     if ($("#map").length){
-        var initializeContactsMap;
+        function initMap() {
+            var element = document.getElementById('map');
+            var options = {
+                zoom: 12,
+                mapId: "fe6c29d69dc8d295",
+                center: {lat:  46.58499387932818, lng: 6.603990154721755},
+            };
 
-        initializeContactsMap = function() {
-            var canvasMap, location, locationMarker, options, x, y;
-            if ($('#map').length) {
-                x = 55.787506;
-                y = 37.635698;
-                location = new google.maps.LatLng(x, y);
-                options = {
-                    center: location,
-                    zoom: 16,
-                    mapTypeControl: false,
-                    scrollwheel: false
-                };
+            var myMap = new google.maps.Map(element, options);
 
-                var markerImage = new google.maps.MarkerImage(
-                    new google.maps.Size(0,150),
-                    new google.maps.Point(0,0),
-                    new google.maps.Point(37,110)
-                );
+            var markers = [
+                {
+                    coordinates: {lat: 46.58499387932818, lng: 6.603990154721755},
+                    // info: '<h3>Москва</h3><br><img src="https://placehold.it/200x150"><br><p>Описание</p>'
+                },
+                // {
+                //     coordinates: {lat: 59.940208, lng: 30.328092},
+                //     info: '<h3>Санкт-Петербург</h3><br> <img src="https://placehold.it/200x150"><br><p>Описание</p>'
+                // },
+                // {
+                //     coordinates: {lat: 50.449973, lng: 30.524911},
+                //     info: '<h3>Киев</h3><br><img src="https://placehold.it/200x150"><br><p>Описание</p>'
+                // }
+            ];
 
+            for(var i = 0; i < markers.length; i++) {
+                addMarker(markers[i]);
+            }
 
-                canvasMap = new google.maps.Map(document.getElementById('map'), options);
-                locationMarker = new google.maps.Marker({
-                    position: location
+            function addMarker(properties) {
+                var IconImg = $('#map').data('marker');
+                var marker = new google.maps.Marker({
+                    position: properties.coordinates,
+                    icon: IconImg,
+                    map: myMap
                 });
 
-                return locationMarker.setMap(canvasMap);
+                if(properties.image) {
+                    marker.setIcon(properties.image);
+                }
+
+                if(properties.info) {
+                    var InfoWindow = new google.maps.InfoWindow({
+                        content: properties.info
+                    });
+
+                    marker.addListener('click', function(){
+                        InfoWindow.open(myMap, marker);
+                    });
+                }
             }
-        };
-        $(document).ready(initializeContactsMap);
+        }
+        initMap()
     }
 
     if ($("section.team").length){
@@ -89,5 +111,16 @@ $(document).ready(function () {
             });
         }
     }
+    $('.banner-photo').mouseover(function(){
+        // $(document).scroll(function () {
+        //     $('html, body').animate({
+        //         scrollTop: $(".animation-block").offset().top // класс объекта к которому приезжаем
+        //     }, 1000); // Скорость прокрутки
+        //     return false;
+        // })
+    });
+    $('.banner-photo').click(function () {
+
+    });
 });
 

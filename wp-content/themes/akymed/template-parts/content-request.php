@@ -1,3 +1,6 @@
+<?php
+$post_id = get_the_ID();
+?>
 <section class="request">
     <div class="request__container main-container">
         <h2 class="request__title section-title" data-aos="fade-up" data-aos-delay="200">
@@ -28,7 +31,7 @@
                 </a>
                 <?php echo do_shortcode('[contact-form-7 id="6" title="requst form"]');?>
             </div>
-            <div class="request__map" id="map" data-aos="fade-left" data-aos-delay="600">
+            <div class="request__map" id="map" data-aos="fade-left" data-aos-delay="600" data-marker="<?php echo get_template_directory_uri() . '/img/templates/map/marker.svg'?>">
 
             </div>
         </div>
