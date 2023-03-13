@@ -84,7 +84,7 @@ $(document).ready(function () {
                 }
             }
         }
-        initMap()
+        initMap();
     }
 
     if ($("section.team").length){
@@ -111,16 +111,34 @@ $(document).ready(function () {
             });
         }
     }
-    $('.banner-photo').mouseover(function(){
-        // $(document).scroll(function () {
-        //     $('html, body').animate({
-        //         scrollTop: $(".animation-block").offset().top // класс объекта к которому приезжаем
-        //     }, 1000); // Скорость прокрутки
-        //     return false;
-        // })
-    });
-    $('.banner-photo').click(function () {
+    if ($(".banner-photo").length){
+        $('.banner-photo').mouseover(function(){
+            // $(document).scroll(function () {
+            //     $('html, body').animate({
+            //         scrollTop: $(".animation-block").offset().top // класс объекта к которому приезжаем
+            //     }, 1000); // Скорость прокрутки
+            //     return false;
+            // })
+        });
+        $('.banner-photo').click(function () {
 
-    });
+        });
+    }
+
+    if ($(".reasons-main").length){
+        $(".reasons-main__item").click(function () {
+            $('.center-image').fadeOut(500);
+            var CurrentElement = $(this).data('item');
+            var ImageElement = $(this).data('image');
+            $('.reasons-main__wrapper').removeClass('rotate-position-item1').removeClass('rotate-position-item2').removeClass('rotate-position-item3').removeClass('rotate-position-item4');
+            $('.reasons-main__item').removeClass('active');
+            $(this).addClass('active');
+            $('.reasons-main__wrapper').addClass('rotate-position-' + CurrentElement + '');
+            setTimeout(function() {
+                $('.center-image').attr('src', '' + ImageElement + '');
+                $('.center-image').fadeIn(500);
+            }, 500);
+        });
+    }
 });
 

@@ -39,7 +39,7 @@ $post_id = get_the_ID();
                     Four reasons for AKYmed
                 </h2>
                 <p class="reasons-main__subtitle section-subtitle" data-aos="fade-right" data-aos-delay="400">
-                    The only holistic solution package through innovative products
+                    CASA software suite… Lorem ipsum dolor sit amet, consectetu
                 </p>
                 <div class="reasons-main__list">
                     <div class="reasons-main__image" data-aos="zoom-in" data-aos-delay="600">
@@ -49,36 +49,115 @@ $post_id = get_the_ID();
                             <img class="outer" src="<?php echo get_template_directory_uri() . '/img/templates/reasons-main/outer.svg'?>" alt="">
                         </div>
                     </div>
-                    <div class="reasons-main__item" data-aos="fade-right" data-aos-delay="800">
+                    <div class="reasons-main__item active" data-aos="fade-right" data-aos-delay="800" data-item="item1" data-image="<?php echo get_template_directory_uri() . '/img/templates/reasons-main/image1.jpg'?>">
                         <h3 class="reasons-main__name">
                             QualiSperm CASA
                         </h3>
                         <div class="reasons-main__desc">
-                            <p>CASA software suite… Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed </p>
+                        </div>
+                        <div class="reasons-main__hidden">
+                            <p>QualiSperm is engineered and designed in Switzerland and comes with a break through new licensing model allowing our clients to adapt cost according to their current workload.</p>
+                            <div class="reasons-main__hidden-tag">
+                                <div class="label">
+                                    Tags:
+                                </div>
+                                <div class="reasons-main__tags">
+                                    <div class="reasons-main__tags-item" style="background-color: #FF6A13">
+                                        HUMAN
+                                    </div>
+                                    <div class="reasons-main__tags-item" style="background-color: #003057">
+                                        Science
+                                    </div>
+                                    <div class="reasons-main__tags-item" style="background-color: #00B2A9">
+                                        animal
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="reasons-main__item" data-aos="fade-right" data-aos-delay="900">
+                    <div class="reasons-main__item" data-aos="fade-right" data-aos-delay="900" data-item="item2" data-image="<?php echo get_template_directory_uri() . '/img/templates/reasons-main/image2.jpg'?>">
                         <h3 class="reasons-main__name">
-                            QualiSperm CASA
+                            Cryopreservation
                         </h3>
                         <div class="reasons-main__desc">
-                            <p>CASA software suite… Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed </p>
+                        </div>
+                        <div class="reasons-main__hidden">
+                            <ul>
+                                <li>Sperm cryopreservation</li>
+                                <li>Biobanking</li>
+                                <li>IVF</li>
+                            </ul>
+                            <div class="reasons-main__hidden-tag">
+                                <div class="label">
+                                    Tags:
+                                </div>
+                                <div class="reasons-main__tags">
+                                    <div class="reasons-main__tags-item" style="background-color: #00B2A9">
+                                        Noah Genetics
+                                    </div>
+                                    <div class="reasons-main__tags-item" style="background-color: #003057">
+                                        Science
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="reasons-main__item" data-aos="fade-left" data-aos-delay="1000">
+                    <div class="reasons-main__item" data-aos="fade-left" data-aos-delay="1000" data-item="item3" data-image="<?php echo get_template_directory_uri() . '/img/templates/reasons-main/image3.jpg'?>">
                         <h3 class="reasons-main__name">
-                            QualiSperm CASA
+                            Consumables
                         </h3>
                         <div class="reasons-main__desc">
-                            <p>CASA software suite… Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                            <p>Distribution of laboratory consumables… Lorem ipsum dolor </p>
+                        </div>
+                        <div class="reasons-main__hidden">
+                            <p>AKYmed is an autorized distributor of Leja Products and Scopescreen. Unique sperm extenders under our brand Noah Genetics.</p>
+                            <div class="reasons-main__hidden-tag">
+                                <div class="label">
+                                    Tags:
+                                </div>
+                                <div class="reasons-main__tags">
+                                    <div class="reasons-main__tags-item" style="background-color: #00B2A9">
+                                        leja slides
+                                    </div>
+                                    <div class="reasons-main__tags-item" style="background-color: #003057">
+                                        qc-beads
+                                    </div>
+                                    <div class="reasons-main__tags-item" style="background-color: #FF6A13">
+                                        Sperm extenders
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="reasons-main__item" data-aos="fade-left" data-aos-delay="1100">
+                    <div class="reasons-main__item" data-aos="fade-left" data-aos-delay="1100" data-item="item4" data-image="<?php echo get_template_directory_uri() . '/img/templates/reasons-main/image4.jpg'?>">
                         <h3 class="reasons-main__name">
-                            QualiSperm CASA
+                            Genomic
                         </h3>
                         <div class="reasons-main__desc">
-                            <p>CASA software suite… Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                            <p>Distribution of laboratory consumables… Lorem ipsum dolor</p>
+                        </div>
+                        <div class="reasons-main__hidden">
+                            <ul>
+                                <li>DNA extraction, Library preparation</li>
+                                <li>Illumina sequencing</li>
+                                <li>Bioinformatics</li>
+                                <li>Data reporting</li>
+                            </ul>
+                            <div class="reasons-main__hidden-tag">
+                                <div class="label">
+                                    Tags:
+                                </div>
+                                <div class="reasons-main__tags">
+                                    <div class="reasons-main__tags-item" style="background-color: #00B2A9">
+                                        Noah Genetics
+                                    </div>
+                                    <div class="reasons-main__tags-item" style="background-color: #003057">
+                                        Science
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
