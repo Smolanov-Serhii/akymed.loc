@@ -145,18 +145,18 @@ $(document).ready(function () {
         $(".banner-photo__img-click").click(function () {
             $('.banner-photo').addClass('started');
             setTimeout(function() {
-                $('.banner-photo__img').fadeOut(300);
-                $('.animation-block').fadeIn(300);
+                $('.banner-photo__img').fadeOut(1000);
+                $('.animation-block').fadeIn(1000);
             }, 1500);
             setTimeout(function() {
                 $('.animation-block__animate').removeClass('execute');
-            }, 1800);
-            setTimeout(function() {
-                $('.animation-block__animate').addClass('execute');
-            }, 3300);
+            }, 2300);
+            // setTimeout(function() {
+            //     $('.animation-block__animate').addClass('execute');
+            // }, 3300);
             setTimeout(function() {
                 $('.animation-block__table').fadeIn(300);
-            }, 3500);
+            }, 3800);
         });
     }
 });

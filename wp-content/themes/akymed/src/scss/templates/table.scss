@@ -1,6 +1,10 @@
 .table{
   margin-top: 7.8rem;
   margin-bottom: 12rem;
+  @media all and (max-width: 768px){
+    margin-top: 30px;
+    margin-bottom: 47px;
+  }
   &__container{
     background: #FFFFFF;
     box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.03), 0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0215656), 0px 22.3363px 17.869px rgba(0, 0, 0, 0.0178832), 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.015), 0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0121168), 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.00843437);
@@ -10,6 +14,53 @@
     @media all and (max-width: 1600px){
       padding: 50px;
     }
+    @media all and (max-width: 768px){
+      box-shadow: none;
+      padding: 0;
+    }
+  }
+  &__block-wide{
+    @media all and (max-width: 768px){
+      display: none;
+    }
+  }
+  &__block-mobile{
+    display: none;
+    margin-bottom: 90px;
+    @media all and (max-width: 768px){
+      display: block;
+    }
+    &-item{
+      background: #FFFFFF;
+      box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.03), 0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0215656), 0px 22.3363px 17.869px rgba(0, 0, 0, 0.0178832), 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.015), 0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0121168), 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.00843437);
+      border-radius: 15px;
+      overflow: hidden;
+      margin-bottom: 18px;
+      &:last-child{
+        margin-bottom: 0;
+      }
+      .row{
+        display: flex;
+        align-items: stretch;
+      }
+      .head{
+        width: 50%;
+        background: rgba(194, 214, 229, 0.31);
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        color: #1B1B1B;
+        padding: 10px 17px;
+      }
+      .value{
+        width: 50%;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 100%;
+        color: #1B1B1B;
+        padding: 10px 17px;
+      }
+    }
   }
   &__img{
     position: absolute;
@@ -17,20 +68,37 @@
     right: 0;
     pointer-events: none;
     width: 542vw * $px;
+    @media all and (max-width: 768px){
+      width: auto;
+      position: static;
+      text-align: center;
+      img{
+        margin: auto;
+      }
+    }
+    @media all and (max-width: 768px){
+      margin-right: -20px;
+      margin-left: -20px;
+      width: calc(100% + 40px);
+    }
   }
   &__content{
-    position: relative;
+    //position: relative;
   }
   &__title{
     text-align: left;
     max-width: 53rem;
+    position: relative;
   }
   &__subtitle{
     max-width: 68rem;
     text-align: left;
+    z-index: 1;
+    position: relative;
   }
   table{
     margin-bottom: 0;
     background-color: rgba(255,255,255,0.8);
+    position: relative;
   }
 }

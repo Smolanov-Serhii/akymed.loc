@@ -56,7 +56,7 @@ $post_id = get_the_ID();
                         Leja slides
                     </h2>
                     <p class="table__subtitle section-subtitle">Leja is providing high quality disposable counting chambers especially made for semen analysis. Due to its characteristics, Leja slides will save time performing a semen analysis, as well as increase the level of accuracy and precision.</p>
-                    <table>
+                    <table class="table__block-wide">
                         <tbody>
                         <tr>
                             <th>Catalogue ID</th><th>Chamber depth</th><th>#Chambers</th><th>Height deviation</th><th>Remarks</th>
@@ -72,6 +72,50 @@ $post_id = get_the_ID();
                         </tr>
                         </tbody>
                     </table>
+                    <div class="table__block-mobile">
+                        <div class="table__block-mobile-item">
+                            <div class="row">
+                                <div class="head">
+                                    Catalogue ID
+                                </div>
+                                <div class="value">
+                                    SC-10-01-04-B(CE)
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="head">
+                                    Chamber depth
+                                </div>
+                                <div class="value">
+                                    10
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="head">
+                                    #Chambers
+                                </div>
+                                <div class="value">
+                                    4
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="head">
+                                    Height deviation
+                                </div>
+                                <div class="value">
+                                    max 10%
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="head">
+                                    Remarks
+                                </div>
+                                <div class="value">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

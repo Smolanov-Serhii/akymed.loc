@@ -94,10 +94,10 @@
     }
     .banner-photo__img{
       &-img{
-        left: -100vw * $px;
-        top: calc(50vh - (300vw * $px));
+        left: 100vw * $px;
+        top: calc(50vh - (225vw * $px));
         transform: rotate(90deg);
-        height: 600vw * $px;
+        height: 330vw * $px;
         width: auto;
         bottom: 0;
       }
