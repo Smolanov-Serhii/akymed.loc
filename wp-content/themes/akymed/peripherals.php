@@ -35,10 +35,13 @@ $post_id = get_the_ID();
             </div>
             <div class="animation-block" style="display: none">
                 <div class="animation-block__container main-container">
-                    <div class="animation-block__animate">
-
+                    <div class="animation-block__animate execute">
+                        <img class="part-1" src="<?php echo get_template_directory_uri() . '/img/templates/animation-block/2.png'?>" alt="">
+                        <img class="part-2" src="<?php echo get_template_directory_uri() . '/img/templates/animation-block/3.png'?>" alt="">
+                        <img class="part-3" src="<?php echo get_template_directory_uri() . '/img/templates/animation-block/4.png'?>" alt="">
+                        <img class="part-4" src="<?php echo get_template_directory_uri() . '/img/templates/animation-block/5.png'?>" alt="">
                     </div>
-                    <div class="animation-block__table" style="display: none">
+                    <div class="animation-block__table main-container" style="display: none">
                         <div class="animation-block__table-list">
                             <div class="animation-block__table-item">
                                 <h3 class="animation-block__table-title">

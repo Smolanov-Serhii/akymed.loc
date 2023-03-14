@@ -49,7 +49,7 @@
       max-width: 1300px;
       width: 1300vw * $px;
       height: 909vw * $px;
-      transition: all 2s ease-in;
+      transition: all 1s ease-in;
       left: calc(50% - (650vw * $px));
       @media all and (min-width: 1921px){
         width: 1440px;

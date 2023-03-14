@@ -144,6 +144,19 @@ $(document).ready(function () {
     if ($(".banner-photo").length){
         $(".banner-photo__img-click").click(function () {
             $('.banner-photo').addClass('started');
+            setTimeout(function() {
+                $('.banner-photo__img').fadeOut(300);
+                $('.animation-block').fadeIn(300);
+            }, 1500);
+            setTimeout(function() {
+                $('.animation-block__animate').removeClass('execute');
+            }, 1800);
+            setTimeout(function() {
+                $('.animation-block__animate').addClass('execute');
+            }, 3300);
+            setTimeout(function() {
+                $('.animation-block__table').fadeIn(300);
+            }, 3500);
         });
     }
 });
