@@ -19,6 +19,10 @@
   position: relative;
   min-height: 100vh;
   overflow: hidden;
+  @media all and (max-width: 500px){
+    padding-top: 60px;
+    //overflow: visible;
+  }
   &__block{
 
   }
@@ -34,6 +38,7 @@
     opacity: 1;
     transition: all 0.5s ease;
     //z-index: 1;
+
   }
   &__title{
 
@@ -52,10 +57,17 @@
       transition: all 1s ease-in;
       left: calc(50% - (650vw * $px));
       @media all and (min-width: 1921px){
-        width: 1440px;
+        width: 1300px;
+        left: calc(50% - 650px);
       }
-      @media all and (max-width: 768px){
-        width: 100%;
+
+      //@media all and (max-width: 768px){
+      //  width: 100%;
+      //}
+      @media all and (max-width: 500px){
+        top: calc(100% - (352vw * $px));
+        left: calc(50% - (150vw * $pxm));
+        width: 300vw * $pxm;
       }
     }
     &-click{
@@ -67,6 +79,11 @@
       animation: 1.5s linear 0s normal none infinite running zoom-click;
       cursor: pointer;
       z-index: 3;
+      @media all and (max-width: 500px){
+        bottom: 110px;
+        width: 100px;
+        left: calc(50% - 50px);
+      }
     }
   }
   &__subtitle{
@@ -80,17 +97,22 @@
     left: 0;
     width: 100%;
     height: 100%;
+    transition: all 1s ease;
     img{
       object-fit: cover;
       object-position: bottom center;
       width: 100%;
       height: 100%;
+      transition: all 1s ease;
     }
   }
   &.started{
     .banner-photo__container{
       opacity: 0;
       pointer-events: none;
+      @media all and (max-width: 1024px){
+        position: absolute;
+      }
     }
     .banner-photo__img{
       &-img{

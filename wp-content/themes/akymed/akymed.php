@@ -72,13 +72,13 @@ $post_id = get_the_ID();
                             </h3>
                             <div class="team__item-wrapper" style="display: none">
                                 <ul>
-                                    <li>2019-present Managing Director, AKYmed, Cheseaux-sur-Lausanne, Switzerland</li>
+                                    <li>Ph.D., Computer, Communication and Information Sciences, EPFL, Lausanne, Switzerland</li>
                                     <li>2018 – Head of Software Development, Biophos SA, Geneva, Switzerland. Responsible for all software products and development: Team leadership, management & planning; Management of external contractors and service providers (as well as internal ones in the future) in terms of software services provision; Communication and problem solving; Innovation Research and development.</li>
                                     <li>2015—2017: Business Strategy Manager, Biophos SA, Lausanne, Switzerland. Conduction and implementation of yearly marketing and software development plans. Management of software development projects; Development of new markets strategy. Key account management.</li>
                                     <li>2011–2015: Business Strategy and Marketing Manager, Biophos SA, Lausanne, Switzerland. Guidance of QualiSperm product line evolution. Conduction of market/industry analysis, set up focus groups, positioning, pricing and go-to-market strategy. Execution of company participation in exhibitions and congress events. Management of software development projects.</li>
                                     <li>2011–2015: Business Strategy and Marketing Manager, Biophos SA, Lausanne, Switzerland. Guidance of QualiSperm product line evolution. Conduction of market/industry analysis, set up focus groups, positioning, pricing and go-to-market strategy. Execution of company participation in exhibitions and congress events. Management of software development projects.</li>
                                 </ul>
-                                <p>2011–2015: Business Strategy and Marketing Manager, Biophos SA, Lausanne, Switzerland. Guidance of QualiSperm product line evolution. Conduction of market/industry analysis, set up focus groups, positioning, pricing and go-to-market strategy. Execution of company participation in exhibitions and congress events. Management of software development projects.</p>
+<!--                                <p>2011–2015: Business Strategy and Marketing Manager, Biophos SA, Lausanne, Switzerland. Guidance of QualiSperm product line evolution. Conduction of market/industry analysis, set up focus groups, positioning, pricing and go-to-market strategy. Execution of company participation in exhibitions and congress events. Management of software development projects.</p>-->
                             </div>
                         </div>
                     </div>
@@ -164,15 +164,16 @@ $post_id = get_the_ID();
                         </div>
                         <div class="team__item-desc">
                             <h3 class="team__item-name">
-                                Fabien Dutoit
+                                David Nusbaumer
                             </h3>
                             <div class="team__item-work">
-                                Software Engineer
+                                Animal Reproducton and Preservation Expert
                             </div>
                             <div class="team__item-about">
                                 <ul>
-                                    <li>M.Sc., Communication Systems, EPFL, Lausanne, Switzerland</li>
-                                    <li>B.Sc., Communication Systems, EPFL, Lausanne, Switzerland</li
+                                    <li>PhD in Life Sciences, UNIL, Switzerland</li>
+                                    <li>MSc. Parasitology and behavioural Ecology, University of Neuchatel, Switzerland</li
+                                    <li>BSc. in Biology, Geography & Earth Sciences, University of Fribourg, Switzerland</li
                                 </ul>
                             </div>
                         </div>
@@ -202,15 +203,15 @@ $post_id = get_the_ID();
                         </div>
                         <div class="team__item-desc">
                             <h3 class="team__item-name">
-                                Fabien Dutoit
+                                Morgane Zbinden
                             </h3>
                             <div class="team__item-work">
-                                Software Engineer
+                                Bioinformatics Engineer
                             </div>
                             <div class="team__item-about">
                                 <ul>
-                                    <li>M.Sc., Communication Systems, EPFL, Lausanne, Switzerland</li>
-                                    <li>B.Sc., Communication Systems, EPFL, Lausanne, Switzerland</li
+                                    <li>M.Sc., Life Sciences Engineering, EPFL, Lausanne, Switzerland</li>
+                                    <li>B.Sc., Life Science, EPFL, Lausanne, Switzerland</li
                                 </ul>
                             </div>
                         </div>
@@ -240,16 +241,13 @@ $post_id = get_the_ID();
                         </div>
                         <div class="team__item-desc">
                             <h3 class="team__item-name">
-                                Fabien Dutoit
+                                Sandra Pesenti
                             </h3>
                             <div class="team__item-work">
-                                Software Engineer
+                                Accountant
                             </div>
                             <div class="team__item-about">
-                                <ul>
-                                    <li>M.Sc., Communication Systems, EPFL, Lausanne, Switzerland</li>
-                                    <li>B.Sc., Communication Systems, EPFL, Lausanne, Switzerland</li
-                                </ul>
+
                             </div>
                         </div>
                         <div class="team__item-full">
@@ -268,7 +266,7 @@ $post_id = get_the_ID();
                                     <li>2011–2015: Business Strategy and Marketing Manager, Biophos SA, Lausanne, Switzerland. Guidance of QualiSperm product line evolution. Conduction of market/industry analysis, set up focus groups, positioning, pricing and go-to-market strategy. Execution of company participation in exhibitions and congress events. Management of software development projects.</li>
                                     <li>2011–2015: Business Strategy and Marketing Manager, Biophos SA, Lausanne, Switzerland. Guidance of QualiSperm product line evolution. Conduction of market/industry analysis, set up focus groups, positioning, pricing and go-to-market strategy. Execution of company participation in exhibitions and congress events. Management of software development projects.</li>
                                 </ul>
-                                <p>2011–2015: Business Strategy and Marketing Manager, Biophos SA, Lausanne, Switzerland. Guidance of QualiSperm product line evolution. Conduction of market/industry analysis, set up focus groups, positioning, pricing and go-to-market strategy. Execution of company participation in exhibitions and congress events. Management of software development projects.</p>
+<!--                                <p>2011–2015: Business Strategy and Marketing Manager, Biophos SA, Lausanne, Switzerland. Guidance of QualiSperm product line evolution. Conduction of market/industry analysis, set up focus groups, positioning, pricing and go-to-market strategy. Execution of company participation in exhibitions and congress events. Management of software development projects.</p>-->
                             </div>
                         </div>
                     </div>

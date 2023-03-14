@@ -4,23 +4,47 @@
   left: 0;
   width: 100%;
   height: 100%;
+  @media all and (max-width: 1024px){
+    position: static;
+  }
+  @media all and (max-width: 500px){
+    top: 60px;
+    height: auto;
+    padding-bottom: 40px;
+    //position: static;
+  }
   &__animate{
     margin-left: -100vw * $px;
     transition: all 1s ease;
+    @media all and (max-width: 1024px){
+      z-index: 1;
+    }
     img{
       transition: all 1s ease;
     }
     .part-1{
       width: 277vw * $px;
+      @media all and (max-width: 768px){
+        width: 1.6 * 277vw * $px;
+      }
     }
     .part-2{
       width: 166vw * $px;
+      @media all and (max-width: 768px){
+        width: 1.6 * 166vw * $px;
+      }
     }
     .part-3{
       width: 271vw * $px;
+      @media all and (max-width: 768px){
+        width: 1.6 * 271vw * $px;
+      }
     }
     .part-4{
       width: 140vw * $px;
+      @media all and (max-width: 768px){
+        width: 1.6 * 140vw * $px;
+      }
     }
     //&:hover{
     //  margin-left: -100vw * $px!important;
@@ -74,6 +98,9 @@
     @media all and (max-width: 1024px){
       flex-direction: column;
     }
+    @media all and (max-width: 500px){
+      height: auto;
+    }
   }
   &__table{
     z-index: 1;
@@ -87,9 +114,13 @@
     right: 0;
     pointer-events: none;
     @media all and (max-width: 1024px){
-      padding-left: 0;
       position: static;
       min-height: auto;
+      padding: 0;
+      margin: 90px 0;
+    }
+    @media all and (max-width: 500px){
+      margin: 50px 0 0 0;
     }
     &-list{
 

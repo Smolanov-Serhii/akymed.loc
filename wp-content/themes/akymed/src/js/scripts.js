@@ -157,6 +157,9 @@ $(document).ready(function () {
             setTimeout(function() {
                 $('.animation-block__table').fadeIn(300);
             }, 3800);
+            if (window.innerWidth < 501) {
+
+            }
         });
     }
 });
