@@ -29,10 +29,11 @@ $post_id = get_the_ID();
                     <p class="banner-photo__subtitle banner-subtitle">AKYmed will help you select the right peripherals. Depending on your selection of any AKYmed product we recommend a variety of equipment that ensures high quality assessment in co-operation with QualiSperm.</p>
                 </div>
                 <div class="banner-photo__img">
-                    <img src="<?php echo get_template_directory_uri() . '/img/templates/banner-photo/img.png'?>" alt="">
+                    <img class="banner-photo__img-click" src="<?php echo get_template_directory_uri() . '/img/templates/banner-photo/click.svg'?>" alt="">
+                    <img class="banner-photo__img-img" src="<?php echo get_template_directory_uri() . '/img/templates/banner-photo/img.png'?>" alt="">
                 </div>
             </div>
-            <div class="animation-block">
+            <div class="animation-block" style="display: none">
                 <div class="animation-block__container main-container">
                     <div class="animation-block__animate">
 

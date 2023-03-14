@@ -140,5 +140,11 @@ $(document).ready(function () {
             }, 500);
         });
     }
+
+    if ($(".banner-photo").length){
+        $(".banner-photo__img-click").click(function () {
+            $('.banner-photo').addClass('started');
+        });
+    }
 });
 
