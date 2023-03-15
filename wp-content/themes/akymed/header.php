@@ -62,11 +62,11 @@
                 );
                 ?>
             </nav>
-            <div class="header__language">
-                <?php
-                qtranxf_generateLanguageSelectCode('short');
-                ?>
-            </div>
+<!--            <div class="header__language">-->
+<!--                --><?php
+//                qtranxf_generateLanguageSelectCode('short');
+//                ?>
+<!--            </div>-->
             <div class="header__burger">
                 <span></span>
                 <span></span>
@@ -84,11 +84,11 @@
                         );
                         ?>
                     </nav>
-                    <div class="header__language">
-                        <?php
-                        qtranxf_generateLanguageSelectCode('short');
-                        ?>
-                    </div>
+<!--                    <div class="header__language">-->
+<!--                        --><?php
+//                        qtranxf_generateLanguageSelectCode('short');
+//                        ?>
+<!--                    </div>-->
                 </div>
             </div>
         </div>

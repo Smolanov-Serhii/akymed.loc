@@ -28,7 +28,42 @@
   &__links{
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
+    @media all and (max-width: 1024px){
+      flex-direction: column;
+    }
+    .wrapper{
+      &:first-child{
+        .contacts__links-item{
+          display: flex;
+          align-items: flex-start;
+          p{
+            margin-bottom: 0.8rem;
+            @media all and (max-width: 500px){
+              margin-bottom: 6px;
+            }
+          }
+        }
+        width: auto;
+      }
+      &:last-child{
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        a{
+          font-size: 1.6rem;
+        }
+        @media all and (max-width: 1024px){
+          width: 100%;
+          a{
+            font-size: 1.6rem;
+          }
+        }
+        .contacts__links-item{
+          display: flex;
+        }
+      }
+    }
     @media all and (max-width: 1200px){
       flex-wrap: wrap;
     }
