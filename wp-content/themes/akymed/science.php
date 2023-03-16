@@ -23,118 +23,95 @@ $post_id = get_the_ID();
             </div>
             <div class="text-title__container main-container">
                 <h1 class="text-title__title banner-title" data-aos="fade-right" data-aos-delay="300">
-                    Scientific methods and <br>patented technology
+                    <?php the_field('title-banner', $post_id)?>
                 </h1>
             </div>
         </section>
         <section class="two-column">
             <div class="two-column__container main-container">
                 <h2 class="two-column__title section-title" data-aos="fade-right" data-aos-delay="500">
-                    Concentration and Motility Analysis
+                    <?php the_field('title-two-column', $post_id)?>
                 </h2>
-                <p class="two-column__subtitle section-subtitle" data-aos="fade-right" data-aos-delay="700">QualiSperm uses proprietary semen analysis algorithms based on fundamentally new technologies rendering reproductive analysis at all levels of concentration. Our Trajectory algorithm and Image Correlation Analysis Method, combined with advanced Digital Sperm Washing, delivers fast and accurate results.</p>
+                <p class="two-column__subtitle section-subtitle" data-aos="fade-right" data-aos-delay="700"><?php the_field('subtitle-two-coolumns', $post_id)?></p>
             </div>
             <div class="two-column__list main-container">
-                <div class="two-column__item" data-aos="fade-up" data-aos-delay="200">
-                    <h3 class="two-column__item-title">
-                        Image Recognition
-                    </h3>
-                    <div class="two-column__item-desc">
-                        <p>Using a larger field, QualiSperm is able to determine more sperms per unit area than any other CASA software. Its advanced image recognition algorithm captures up to 1000 sperms per image within only 4 seconds and further increases accuracy by scanning as many individual fields as are needed to reach a statistically relevant number.</p>
-                    </div>
-                </div>
-                <div class="two-column__item" data-aos="fade-up" data-aos-delay="400">
-                    <h3 class="two-column__item-title">
-                        Trajectory Analysis
-                    </h3>
-                    <div class="two-column__item-desc">
-                        <p>Using a larger field, QualiSperm is able to determine more sperms per unit area than any other CASA software. Its advanced image recognition algorithm captures up to 1000 sperms per image within only 4 seconds and further increases accuracy by scanning as many individual fields as are needed to reach a statistically relevant number.</p>
-                    </div>
-                </div>
-                <div class="two-column__item" data-aos="fade-up" data-aos-delay="200">
-                    <h3 class="two-column__item-title">
-                        Digital Sperm Washing
-                    </h3>
-                    <div class="two-column__item-desc">
-                        <p>Our unique Digital Sperm Washing (DSW) algorithm significantly improves discrimination of non sperm objects within the captured images. This technology obliterates time consuming manual post processing and delivers precise results measuring concentration and motility.</p>
-                    </div>
-                </div>
-                <div class="two-column__item" data-aos="fade-up" data-aos-delay="400">
-                    <h3 class="two-column__item-title">
-                        Image Correlation Analysis
-                    </h3>
-                    <div class="two-column__item-desc">
-                        <p>Using a larger field, QualiSperm is able to determine more sperms per unit area than any other CASA software. Its advanced image recognition algorithm captures up to 1000 sperms per image within only 4 seconds and further increases accuracy by scanning as many individual fields as are needed to reach a statistically relevant number.</p>
-                    </div>
-                </div>
+                <?php
+                if( have_rows('columns', $post_id) ):
+                    while( have_rows('columns', $post_id) ) : the_row();
+                        $title = get_sub_field('title-item');
+                        $desc = get_sub_field('description-item');
+                        ?>
+                        <div class="two-column__item" data-aos="fade-up" data-aos-delay="200">
+                            <h3 class="two-column__item-title">
+                                <?php echo $title;?>
+                            </h3>
+                            <div class="two-column__item-desc">
+                                <?php echo $desc;?>
+                            </div>
+                        </div>
+                    <?php
+                    endwhile;
+                endif;
+                ?>
             </div>
         </section>
         <section class="two-column-img">
             <div class="two-column-img__container main-container" data-aos="zoom-in" data-aos-delay="200">
                 <div class="two-column-img__img">
-                    <img src="<?php echo get_template_directory_uri() . '/img/templates/two-column-img/img.png'?>" alt="">
+                    <img src="<?php echo the_field('image-morph', $post_id)?>" alt="<?php the_field('title-morph', $post_id)?>">
                 </div>
             </div>
             <div class="two-column__container main-container">
                 <h2 class="two-column__title section-title" data-aos="fade-up" data-aos-delay="200">
-                    Morphology
+                    <?php the_field('title-morph', $post_id)?>
                 </h2>
-                <p class="two-column__subtitle section-subtitle" data-aos="fade-up" data-aos-delay="400">The sperm morphology module of QualiSperm is primarily based on mathematical morphology segmentation techniques. A dynamic local threshold operation transforms the grayscale microscope image into a binary matrix.</p>
+                <p class="two-column__subtitle section-subtitle" data-aos="fade-up" data-aos-delay="400"><?php the_field('subtitle-mrph', $post_id)?></p>
             </div>
             <div class="two-column__list main-container">
-                <div class="two-column__item" data-aos="fade-up" data-aos-delay="200">
-                    <div class="two-column__item-desc">
-                        <p>Several morphological shape-based filters are applied to identify various, specific sperm parts: head, acrosome, mid-piece and tail. The identified (segmented) sperm parts are then quantified in terms of purely geometric parameters such as length, width, area, angles, symmetry, perimeter and roughness.</p>
-                    </div>
-                </div>
-                <div class="two-column__item" data-aos="fade-up" data-aos-delay="400">
-                    <div class="two-column__item-desc">
-                        <p>Sperms are classified against the WHO and Kruger sperm normality criteria. For instance, a head shape is classified as tapered if the ratio between head length and head width is higher than its corresponding normality interval.</p>
-                    </div>
-                </div>
+                <?php
+                if( have_rows('two_column-niz', $post_id) ):
+                    while( have_rows('two_column-niz', $post_id) ) : the_row();
+                        $desc = get_sub_field('description-two-column-niz');
+                        ?>
+                        <div class="two-column__item" data-aos="fade-up" data-aos-delay="200">
+                            <div class="two-column__item-desc">
+                                <?php echo $desc;?>
+                            </div>
+                        </div>
+                    <?php
+                    endwhile;
+                endif;
+                ?>
             </div>
         </section>
         <section class="image-small" data-aos="fade-up" data-aos-delay="200">
             <div class="image-small__bg">
-                <img src="<?php echo get_template_directory_uri() . '/img/templates/image-small/bg.jpg'?>" alt="">
+                <img src="<?php echo the_field('image-image-block', $post_id)?>" alt="<?php the_field('title-banner', $post_id)?>">
             </div>
         </section>
         <section class="publication">
             <div class="publication__container main-container">
                 <h2 class="publication__title section-title">
-                    Publications
+                    <?php the_field('title-publications', $post_id)?>
                 </h2>
                 <div class="publication__list">
-                    <div class="publication__item" data-aos="fade-up" data-aos-delay="200">
-                        <a href="#"><h3 class="publication__item-title">2020 – Chicken seminal fluid lacks CD9- and CD44-bearingextracellular vesicles</h3></a>
-                        <p>Alvarez-Rodriguez M, Ntzouni M, Wright D, et al.</p>
-                        <p>Reprod Dom Anim. 2020; 55: 293–300</p>
-                    </div>
-                    <div class="publication__item" data-aos="fade-up" data-aos-delay="200">
-                        <a href="#"><h3 class="publication__item-title">2019 – Assessment of Oligo-Chitosan Biocompatibility toward Human Spermatozoa</h3></a>
-                        <p>Schimpf U, Nachmann G, Trombotto S, Houska P, Yan H, Björndahl L, Crouzier T.</p>
-                        <p>ACS Applied Materials & Interfaces 2019; 11:50, 46572-46584</p>
-                    </div>
-                    <div class="publication__item" data-aos="fade-up" data-aos-delay="200">
-                        <a href="#"><h3 class="publication__item-title">2019 – Assessment of Oligo-Chitosan Biocompatibility toward Human Spermatozoa</h3></a>
-                        <p>Schimpf U, Nachmann G, Trombotto S, Houska P, Yan H, Björndahl L, Crouzier T.</p>
-                        <p>ACS Applied Materials & Interfaces 2019; 11:50, 46572-46584</p>
-                    </div>
-                    <div class="publication__item" data-aos="fade-up" data-aos-delay="200">
-                        <a href="#"><h3 class="publication__item-title">2019 – Assessment of Oligo-Chitosan Biocompatibility toward Human Spermatozoa</h3></a>
-                        <p>Schimpf U, Nachmann G, Trombotto S, Houska P, Yan H, Björndahl L, Crouzier T.</p>
-                        <p>ACS Applied Materials & Interfaces 2019; 11:50, 46572-46584</p>
-                    </div>
-                    <div class="publication__item" data-aos="fade-up" data-aos-delay="200">
-                        <a href="#"><h3 class="publication__item-title">2019 – Assessment of Oligo-Chitosan Biocompatibility toward Human Spermatozoa</h3></a>
-                        <p>Schimpf U, Nachmann G, Trombotto S, Houska P, Yan H, Björndahl L, Crouzier T.</p>
-                        <p>ACS Applied Materials & Interfaces 2019; 11:50, 46572-46584</p>
-                    </div>
-                    <div class="publication__item" data-aos="fade-up" data-aos-delay="200">
-                        <a href="#"><h3 class="publication__item-title">2019 – Assessment of Oligo-Chitosan Biocompatibility toward Human Spermatozoa</h3></a>
-                        <p>Schimpf U, Nachmann G, Trombotto S, Houska P, Yan H, Björndahl L, Crouzier T.</p>
-                        <p>ACS Applied Materials & Interfaces 2019; 11:50, 46572-46584</p>
-                    </div>
+                    <?php
+                    if( have_rows('publications_list', $post_id) ):
+                        while( have_rows('publications_list', $post_id) ) : the_row();
+                            $title = get_sub_field('title');
+                            $author = get_sub_field('author');
+                            $materil = get_sub_field('materials');
+                            $lnk = get_sub_field('link_to_material');
+                            ?>
+                            <div class="publication__item" data-aos="fade-up" data-aos-delay="200">
+                                <a href="<?php echo $lnk;?>" target="_blank" rel="nofollow"><h3 class="publication__item-title"><?php echo $title;?></h3></a>
+                                <p><?php echo $author;?></p>
+                                <p><?php echo $materil;?></p>
+                            </div>
+                        <?php
+                        endwhile;
+                    endif;
+                    ?>
                 </div>
             </div>
         </section>

@@ -1,3 +1,23 @@
+.page-id-77{
+  .animation-block__table-list{
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    .animation-block__table-item{
+      @media all and (max-width: 1024px){
+        width: 100%;
+      }
+      &:nth-last-child(2), &:nth-last-of-type(-n+2){
+        width: calc(50% - 10px);
+        margin-bottom: 12px;
+        @media all and (max-width: 1024px){
+          width: 100%;
+        }
+      }
+    }
+  }
+}
 .animation-block{
   position: absolute;
   top: 0;
@@ -16,6 +36,7 @@
   &__animate{
     margin-left: -100vw * $px;
     transition: all 1s ease;
+    pointer-events: none;
     @media all and (max-width: 1024px){
       z-index: 1;
     }
@@ -112,7 +133,7 @@
     align-items: center;
     position: absolute;
     right: 0;
-    pointer-events: none;
+    //pointer-events: none;
     @media all and (max-width: 1024px){
       position: static;
       min-height: auto;

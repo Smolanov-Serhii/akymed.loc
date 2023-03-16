@@ -23,9 +23,9 @@ $post_id = get_the_ID();
             </div>
             <div class="text-title__container main-container">
                 <h1 class="text-title__title banner-title" data-aos="fade-up" data-aos-delay="200">
-                    Contact AKYmed
+                    <?php the_field('title-banner', $post_id)?>
                 </h1>
-                <p class="text-title__subtitle banner-subtitle" data-aos="fade-up" data-aos-delay="400">Contact us today and one of our consultants will help you find the right <br>solution for your business.</p>
+                <p class="text-title__subtitle banner-subtitle" data-aos="fade-up" data-aos-delay="400"><?php the_field('subtitle-banner', $post_id)?></p>
             </div>
         </section>
         <section class="contacts">
@@ -41,11 +41,16 @@ $post_id = get_the_ID();
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M12 19C9.65 17.2667 7.89567 15.5833 6.737 13.95C5.579 12.3167 5 10.7167 5 9.15C5 7.96667 5.21267 6.929 5.638 6.037C6.06267 5.14567 6.60833 4.4 7.275 3.8C7.94167 3.2 8.69167 2.75 9.525 2.45C10.3583 2.15 11.1833 2 12 2C12.8167 2 13.6417 2.15 14.475 2.45C15.3083 2.75 16.0583 3.2 16.725 3.8C17.3917 4.4 17.9377 5.14567 18.363 6.037C18.7877 6.929 19 7.96667 19 9.15C19 10.7167 18.4207 12.3167 17.262 13.95C16.104 15.5833 14.35 17.2667 12 19ZM12 11C12.55 11 13.021 10.804 13.413 10.412C13.8043 10.0207 14 9.55 14 9C14 8.45 13.8043 7.979 13.413 7.587C13.021 7.19567 12.55 7 12 7C11.45 7 10.9793 7.19567 10.588 7.587C10.196 7.979 10 8.45 10 9C10 9.55 10.196 10.0207 10.588 10.412C10.9793 10.804 11.45 11 12 11ZM5 22V20H19V22H5Z" fill="#00B2A9"/>
                                 </svg>
-<!--                                --><?php //echo the_field('adress', 'options')?>
                                 <div class="column">
-                                    <p><strong>Billing address:</strong> AKYmed Ltd., Derrière le Château 6, 1033 Cheseaux-sur-Lausanne</p>
-                                    <p><strong>Office:</strong> AKYmed Ltd., Rue de Lausanne 55, 1110 Morges</p>
-                                    <p><strong>Laboratory:</strong> StartLab Biopôle, Rte de la Corniche 5, 1066 Epalinges</p>
+                                    <?php if( have_rows('adresses', $post_id) ): ?>
+                                        <?php $counter = 1; ?>
+                                        <?php while( have_rows('adresses', $post_id) ): the_row();
+                                            $type = get_sub_field('type_location');
+                                            $adress = get_sub_field('adress_location');
+                                            ?>
+                                            <p><strong><?php echo $type;?>:</strong><?php echo $adress;?></p>
+                                        <?php endwhile; ?>
+                                    <?php endif; ?>
                                 </div>
                             </div>
                         </div>

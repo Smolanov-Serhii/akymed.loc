@@ -114,6 +114,9 @@
         position: absolute;
       }
     }
+    .banner-photo__block{
+      pointer-events: none;
+    }
     .banner-photo__img{
       &-img{
         left: 100vw * $px;

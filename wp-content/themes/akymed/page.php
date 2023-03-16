@@ -18,155 +18,95 @@ $post_id = get_the_ID();
 ?>
 	<main id="main" class="main">
         <section class="banner-main">
+            <?php
+            $bg = get_field('banner_image', $post_id);
+            $logo1 = get_field('first_logo', $post_id);
+            $logo2 = get_field('second_logo', $post_id);
+            ?>
             <div class="banner-main__bg">
-                <img src="<?php echo get_template_directory_uri() . '/img/templates/banner-main/bg.png'?>" alt="">
+                <img src="<?php echo esc_url($bg['url']); ?>" alt="<?php echo esc_attr($bg['alt']); ?>">
             </div>
             <div class="banner-main__container">
                 <h1 class="banner-main__title banner-title" data-aos="fade-up" data-aos-delay="300">
-                    <span>Next generation </span>
-                    fertility and preservation
-                    <span>solutions</span>
+                    <?php the_field('banner_title', $post_id)?>
                 </h1>
                 <div class="banner-main__logos" data-aos="fade-up" data-aos-delay="800">
-                    <img src="<?php echo get_template_directory_uri() . '/img/templates/banner-main/logo1.svg'?>" alt="">
-                    <img src="<?php echo get_template_directory_uri() . '/img/templates/banner-main/logo2.svg'?>" alt="">
+                    <img src="<?php echo esc_url($logo1['url']); ?>" alt="<?php echo esc_attr($logo1['alt']); ?>">
+                    <img src="<?php echo esc_url($logo2['url']); ?>" alt="<?php echo esc_attr($logo2['alt']); ?>">
                 </div>
             </div>
         </section>
         <section class="reasons-main">
+            <?php
+            $default_image = get_field('default_center_image', $post_id);
+            ?>
             <div class="reasons-main__container main-container">
                 <h2 class="reasons-main__title section-title" data-aos="fade-right" data-aos-delay="200">
-                    Four reasons for AKYmed
+                    <?php the_field('reasons-title', $post_id)?>
                 </h2>
                 <p class="reasons-main__subtitle section-subtitle" data-aos="fade-right" data-aos-delay="400">
-                    CASA software suite… Lorem ipsum dolor sit amet, consectetu
+                    <?php the_field('block_subtitle', $post_id)?>
                 </p>
                 <div class="reasons-main__list">
                     <div class="reasons-main__image" data-aos="zoom-in" data-aos-delay="600">
                         <div class="reasons-main__wrapper">
-                            <img class="center-image" src="<?php echo get_template_directory_uri() . '/img/templates/reasons-main/circle.jpg'?>" alt="">
+                            <img class="center-image" src="<?php echo esc_url($default_image['url']); ?>" alt="<?php the_field('reasons-title', $post_id)?>">
                             <img class="inner" src="<?php echo get_template_directory_uri() . '/img/templates/reasons-main/inner.svg'?>" alt="">
                             <img class="outer" src="<?php echo get_template_directory_uri() . '/img/templates/reasons-main/outer.svg'?>" alt="">
                         </div>
                     </div>
-                    <div class="reasons-main__item active" data-aos="fade-right" data-aos-delay="800" data-item="item1" data-image="<?php echo get_template_directory_uri() . '/img/templates/reasons-main/image1.jpg'?>">
-                        <h3 class="reasons-main__name">
-                            QualiSperm CASA
-                        </h3>
-                        <div class="reasons-main__desc">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed </p>
-                        </div>
-                        <div class="reasons-main__hidden">
-                            <p>QualiSperm is engineered and designed in Switzerland and comes with a break through new licensing model allowing our clients to adapt cost according to their current workload.</p>
-                            <div class="reasons-main__hidden-tag">
-                                <div class="label">
-                                    Tags:
+                    <?php if( have_rows('reasons-items', $post_id) ): ?>
+                        <?php $counter = 1; ?>
+                        <?php while( have_rows('reasons-items', $post_id) ): the_row();
+                            $image = get_sub_field('item_image');
+                            $title = get_sub_field('item_title');
+                            $simple = get_sub_field('simple_text');
+                            $full= get_sub_field('full_text');
+
+                            ?>
+                            <div class="reasons-main__item <?php if($counter == 1){echo 'active';}?>" data-aos="fade-right" data-aos-delay="<?php echo $counter + 7 . '00'?>" data-item="<?php echo 'item' . $counter?>" data-image="<?php echo esc_url($image['url']); ?>">
+                                <h3 class="reasons-main__name">
+                                    <?php echo $title?>
+                                </h3>
+                                <div class="reasons-main__desc">
+                                    <?php echo $simple?>
                                 </div>
-                                <div class="reasons-main__tags">
-                                    <div class="reasons-main__tags-item" style="background-color: #FF6A13">
-                                        HUMAN
-                                    </div>
-                                    <div class="reasons-main__tags-item" style="background-color: #003057">
-                                        Science
-                                    </div>
-                                    <div class="reasons-main__tags-item" style="background-color: #00B2A9">
-                                        animal
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="reasons-main__item" data-aos="fade-right" data-aos-delay="900" data-item="item2" data-image="<?php echo get_template_directory_uri() . '/img/templates/reasons-main/image2.jpg'?>">
-                        <h3 class="reasons-main__name">
-                            Cryopreservation
-                        </h3>
-                        <div class="reasons-main__desc">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed </p>
-                        </div>
-                        <div class="reasons-main__hidden">
-                            <ul>
-                                <li>Sperm cryopreservation</li>
-                                <li>Biobanking</li>
-                                <li>IVF</li>
-                            </ul>
-                            <div class="reasons-main__hidden-tag">
-                                <div class="label">
-                                    Tags:
-                                </div>
-                                <div class="reasons-main__tags">
-                                    <div class="reasons-main__tags-item" style="background-color: #00B2A9">
-                                        Noah Genetics
-                                    </div>
-                                    <div class="reasons-main__tags-item" style="background-color: #003057">
-                                        Science
+                                <div class="reasons-main__hidden">
+                                    <?php echo $full?>
+                                    <div class="reasons-main__hidden-tag">
+                                        <div class="label">
+                                            <?php echo the_field('text_tags', 'options')?>:
+                                        </div>
+                                        <div class="reasons-main__tags">
+                                            <?php
+                                            if( have_rows('tags_list') ):
+                                                while( have_rows('tags_list') ) : the_row();
+                                                    $tag = get_sub_field('tag');
+                                                    $color = get_sub_field('tag_color');
+                                                    ?>
+                                                    <div class="reasons-main__tags-item" style="background-color: <?php echo $color?>;">
+                                                        <?php echo $tag?>
+                                                    </div>
+                                                <?php
+                                                endwhile;
+                                            endif;
+                                            ?>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="reasons-main__item" data-aos="fade-left" data-aos-delay="1000" data-item="item3" data-image="<?php echo get_template_directory_uri() . '/img/templates/reasons-main/image3.jpg'?>">
-                        <h3 class="reasons-main__name">
-                            Consumables
-                        </h3>
-                        <div class="reasons-main__desc">
-                            <p>Distribution of laboratory consumables… Lorem ipsum dolor </p>
-                        </div>
-                        <div class="reasons-main__hidden">
-                            <p>AKYmed is an autorized distributor of Leja Products and Scopescreen. Unique sperm extenders under our brand Noah Genetics.</p>
-                            <div class="reasons-main__hidden-tag">
-                                <div class="label">
-                                    Tags:
-                                </div>
-                                <div class="reasons-main__tags">
-                                    <div class="reasons-main__tags-item" style="background-color: #00B2A9">
-                                        leja slides
-                                    </div>
-                                    <div class="reasons-main__tags-item" style="background-color: #003057">
-                                        qc-beads
-                                    </div>
-                                    <div class="reasons-main__tags-item" style="background-color: #FF6A13">
-                                        Sperm extenders
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="reasons-main__item" data-aos="fade-left" data-aos-delay="1100" data-item="item4" data-image="<?php echo get_template_directory_uri() . '/img/templates/reasons-main/image4.jpg'?>">
-                        <h3 class="reasons-main__name">
-                            Genomic
-                        </h3>
-                        <div class="reasons-main__desc">
-                            <p>Distribution of laboratory consumables… Lorem ipsum dolor</p>
-                        </div>
-                        <div class="reasons-main__hidden">
-                            <ul>
-                                <li>DNA extraction, Library preparation</li>
-                                <li>Illumina sequencing</li>
-                                <li>Bioinformatics</li>
-                                <li>Data reporting</li>
-                            </ul>
-                            <div class="reasons-main__hidden-tag">
-                                <div class="label">
-                                    Tags:
-                                </div>
-                                <div class="reasons-main__tags">
-                                    <div class="reasons-main__tags-item" style="background-color: #00B2A9">
-                                        Noah Genetics
-                                    </div>
-                                    <div class="reasons-main__tags-item" style="background-color: #003057">
-                                        Science
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                        <?php
+                            $counter ++
+                            ?>
+                        <?php endwhile; ?>
+                    <?php endif; ?>
                 </div>
                 <div class="reasons-main__buttons" data-aos="fade-up" data-aos-delay="1400">
-                    <a href="#" class="button button-green">
-                        <span>For Humans</span>
+                    <a href="<?php the_field('first_button_link', $post_id)?>" class="button button-green">
+                        <span><?php the_field('first_button_text', $post_id)?></span>
                     </a>
-                    <a href="#" class="button button-orange">
-                        <span>For Animals</span>
+                    <a href="<?php the_field('second_button_link', $post_id)?>" class="button button-orange">
+                        <span><?php the_field('second_button_text', $post_id)?></span>
                     </a>
                 </div>
             </div>

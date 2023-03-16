@@ -53,6 +53,12 @@
         a{
           font-size: 1.6rem;
         }
+        .contacts__links-item{
+          margin-bottom: 0.8rem;
+          @media all and (max-width: 500px){
+            margin-bottom: 6px;
+          }
+        }
         @media all and (max-width: 1024px){
           width: 100%;
           a{
