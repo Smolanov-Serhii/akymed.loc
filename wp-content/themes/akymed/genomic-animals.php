@@ -19,46 +19,42 @@ $post_id = get_the_ID();
 	<main id="main" class="main">
         <section class="text-title text-title-img">
             <div class="text-title__bg">
-                <img src="<?php echo get_template_directory_uri() . '/img/templates/text-title-img/bg.png'?>" alt="">
+                <img src="<?php echo the_field('image-banner', $post_id)?>" alt="<?php the_field('title-banner', $post_id)?>">
             </div>
             <div class="text-title__container main-container">
                 <h1 class="text-title__title banner-title">
-                    Breeding with DNA
+                    <?php the_field('title-banner', $post_id)?>
                 </h1>
-                <p class="text-title__subtitle banner-subtitle">Beyond the fusion of gametes, animal breeding is about the fusion of DNA.The combination of matching parental DNA is crucial for the health of the offspring. With Next Generation DNA Sequencing technologies, we provide you with the best way to match breeders together. We tell you, based on highly qualitative genetic information, how to avoid inbreeding and boost genetic diversity in your production. For a better animal health.</p>
+                <p class="text-title__subtitle banner-subtitle"><?php the_field('subtitle-banner', $post_id)?></p>
             </div>
         </section>
         <section class="img-grad main-container">
             <div class="img-grad__container">
                 <div class="img-grad__list">
-                    <div class="img-grad__item">
-                        <div class="img-grad__wrapper">
-                            <h2 class="img-grad__title section-title">
-                                Sperm preservation
-                            </h2>
-                            <div class="img-grad__content">
-                                <p>We develop solutions for the conservation of animal sperm. For short-term storage (few days), we provide solutions to dilute your samples and conserve their fertilization potency. This allows you to have more flexibility in your production routine or to transport fertilizing material to a facility to another.</p>
-                                <p>For long the long term, we develop sperm cryopreservation solutions. Both can be performed on site by our team, or by yourself with our products.</p>
+                    <?php
+                    if( have_rows('image_text_list', $post_id) ):
+                        while( have_rows('image_text_list', $post_id) ) : the_row();
+                            $image = get_sub_field('image');
+                            $title = get_sub_field('title');
+                            $content = get_sub_field('content');
+                            ?>
+                            <div class="img-grad__item">
+                                <div class="img-grad__wrapper">
+                                    <h2 class="img-grad__title section-title">
+                                        <?php echo $title?>
+                                    </h2>
+                                    <div class="img-grad__content">
+                                        <?php echo $content?>
+                                    </div>
+                                </div>
+                                <div class="img-grad__img">
+                                    <img src="<?php echo $image?>" alt="<?php echo $title?>">
+                                </div>
                             </div>
-                        </div>
-                        <div class="img-grad__img">
-                            <img src="<?php echo get_template_directory_uri() . '/img/templates/img-grad/1.jpg'?>" alt="">
-                        </div>
-                    </div>
-                    <div class="img-grad__item">
-                        <div class="img-grad__wrapper">
-                            <h2 class="img-grad__title section-title">
-                                Sperm biobanking
-                            </h2>
-                            <div class="img-grad__content">
-                                <p>With sperm cryopreservation, we offer you long term banking of your genetic material. These sperm can be retrieved anytime to produce a new generation that carry the genetic material we have kept for you.</p>
-                                <p>This is a life-time insurance for your genetic material, this extends the generation time of your breeders, increases flexibility of gamete availability over time and most importantly, allow to restore extinct lines or populations after collapse</p>
-                            </div>
-                        </div>
-                        <div class="img-grad__img">
-                            <img src="<?php echo get_template_directory_uri() . '/img/templates/img-grad/2.jpg'?>" alt="">
-                        </div>
-                    </div>
+                        <?php
+                        endwhile;
+                    endif;
+                    ?>
                 </div>
             </div>
         </section>

@@ -4,11 +4,7 @@ $post_id = get_the_ID();
 <section class="request">
     <div class="request__container main-container">
         <h2 class="request__title section-title" data-aos="fade-up" data-aos-delay="200">
-            <?php
-            if(get_field('title-map', $post_id)){
-                the_field('title-map', $post_id);
-            } else echo "Request a Quote"
-            ?>
+            <?php the_field('title-map', $post_id); ?>
         </h2>
         <p class="request__subtitle section-subtitle" data-aos="fade-up" data-aos-delay="500">
             <?php the_field('subtitle-map', $post_id); ?>

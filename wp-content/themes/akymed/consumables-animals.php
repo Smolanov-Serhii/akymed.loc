@@ -23,98 +23,154 @@ $post_id = get_the_ID();
             </div>
             <div class="text-title__container main-container">
                 <h1 class="text-title__title banner-title">
-                    Concentration and <br>Motility disposables
+                    <?php the_field('title-banner', $post_id)?>
                 </h1>
             </div>
         </section>
         <section class="img-grad main-container">
             <div class="img-grad__container">
                 <div class="img-grad__list">
-                    <div class="img-grad__item">
-                        <div class="img-grad__wrapper">
-                            <h2 class="img-grad__title section-title">
-                                FISH STOP
-                            </h2>
-                            <div class="img-grad__content">
-                                <p>Isotonic medium for the short term conservation of fish sperm</p>
+                    <?php
+                    if( have_rows('image_text_list', $post_id) ):
+                        while( have_rows('image_text_list', $post_id) ) : the_row();
+                            $image = get_sub_field('image');
+                            $title = get_sub_field('title');
+                            $content = get_sub_field('content');
+                            ?>
+                            <div class="img-grad__item">
+                                <div class="img-grad__wrapper">
+                                    <h2 class="img-grad__title section-title">
+                                        <?php echo $title?>
+                                    </h2>
+                                    <div class="img-grad__content">
+                                        <?php echo $content?>
+                                    </div>
+                                </div>
+                                <div class="img-grad__img">
+                                    <img src="<?php echo $image?>" alt="<?php echo $title?>">
+                                </div>
                             </div>
-                        </div>
-                        <div class="img-grad__img">
-                            <img src="<?php echo get_template_directory_uri() . '/img/templates/img-grad/3.jpg'?>" alt="">
-                        </div>
-                    </div>
+                        <?php
+                        endwhile;
+                    endif;
+                    ?>
                 </div>
             </div>
         </section>
         <section class="table main-container">
             <div class="table__container">
-                <div class="table__img">
-                    <img src="<?php echo get_template_directory_uri() . '/img/templates/table/img.jpg'?>" alt="">
-                </div>
                 <div class="table__content">
                     <h2 class="table__title section-title">
-                        Leja slides
+                        <?php the_field('titletable', $post_id)?>
                     </h2>
-                    <p class="table__subtitle section-subtitle">Leja is providing high quality disposable counting chambers especially made for semen analysis. Due to its characteristics, Leja slides will save time performing a semen analysis, as well as increase the level of accuracy and precision.</p>
+                    <p class="table__subtitle section-subtitle"><?php the_field('subtitle-table', $post_id)?></p>
+                    <div class="table__img">
+                        <img src="<?php the_field('block_image', $post_id)?>" alt="<?php the_field('titletable', $post_id)?>">
+                    </div>
                     <table class="table__block-wide">
                         <tbody>
-                        <tr>
-                            <th>Catalogue ID</th><th>Chamber depth</th><th>#Chambers</th><th>Height deviation</th><th>Remarks</th>
-                        </tr>
-                        <tr>
-                            <td>SC-10-01-04-B(CE)</td><td>10</td><td>4</td><td>max 10%</td><td></td>
-                        </tr>
-                        <tr>
-                            <td>SC-12-01-04-C(CE)</td><td>12</td><td>2</td><td>max 10%</td><td></td>
-                        </tr>
-                        <tr>
-                            <td>SC-100-01-02-A(CE)</td><td>100</td><td>2</td><td>max 10%</td><td>azoospermia / post-vasectomy</td>
-                        </tr>
+                        <?php
+                        $column_1 = "";
+                        $column_2 = "";
+                        $column_3 = "";
+                        $column_4 = "";
+                        $column_5 = "";
+                        $counter = 1;
+                        if( have_rows('table', $post_id) ):
+                            while( have_rows('table', $post_id) ) : the_row();
+                                $value1 = get_sub_field('column_1');
+                                $value2 = get_sub_field('column_2');
+                                $value3 = get_sub_field('column_3');
+                                $value4 = get_sub_field('column_4');
+                                $value5 = get_sub_field('column_5');
+                                if($counter ==1){
+                                    $column_1 = $value1;
+                                    $column_2 = $value2;
+                                    $column_3 = $value3;
+                                    $column_4 = $value4;
+                                    $column_5 = $value5;
+                                    ?>
+                                    <tr>
+                                        <th><?php echo $value1;?></th><th><?php echo $value2;?></th><th><?php echo $value3;?></th><th><?php echo $value4;?></th><th><?php echo $value5;?></th>
+                                    </tr>
+                                    <?php
+                                } else {
+                                    ?>
+                                    <tr>
+                                        <td><?php echo $value1;?></td><td><?php echo $value2;?></td><td><?php echo $value3;?></td><td><?php echo $value4;?></td><td><?php echo $value5;?></td>
+                                    </tr>
+                                    <?php
+                                }
+                                ?>
+                                <?php
+                                $counter++;
+                            endwhile;
+                        endif;
+                        ?>
                         </tbody>
                     </table>
                     <div class="table__block-mobile">
-                        <div class="table__block-mobile-item">
-                            <div class="row">
-                                <div class="head">
-                                    Catalogue ID
-                                </div>
-                                <div class="value">
-                                    SC-10-01-04-B(CE)
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="head">
-                                    Chamber depth
-                                </div>
-                                <div class="value">
-                                    10
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="head">
-                                    #Chambers
-                                </div>
-                                <div class="value">
-                                    4
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="head">
-                                    Height deviation
-                                </div>
-                                <div class="value">
-                                    max 10%
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="head">
-                                    Remarks
-                                </div>
-                                <div class="value">
-
-                                </div>
-                            </div>
-                        </div>
+                        <?php
+                        $counter = 1;
+                        if( have_rows('table', $post_id) ):
+                            while( have_rows('table', $post_id) ) : the_row();
+                                $value1 = get_sub_field('column_1');
+                                $value2 = get_sub_field('column_2');
+                                $value3 = get_sub_field('column_3');
+                                $value4 = get_sub_field('column_4');
+                                $value5 = get_sub_field('column_5');
+                                if($counter > 1){
+                                    ?>
+                                    <div class="table__block-mobile-item">
+                                        <div class="row">
+                                            <div class="head">
+                                                <?php echo $column_1?>
+                                            </div>
+                                            <div class="value">
+                                                <?php echo $value1?>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="head">
+                                                <?php echo $column_2?>
+                                            </div>
+                                            <div class="value">
+                                                <?php echo $value2?>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="head">
+                                                <?php echo $column_3?>
+                                            </div>
+                                            <div class="value">
+                                                <?php echo $value3?>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="head">
+                                                <?php echo $column_4?>
+                                            </div>
+                                            <div class="value">
+                                                <?php echo $value4?>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="head">
+                                                <?php echo $column_5?>
+                                            </div>
+                                            <div class="value">
+                                                <?php echo $value5?>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <?php
+                                }
+                                ?>
+                                <?php
+                                $counter++;
+                            endwhile;
+                        endif;
+                        ?>
                     </div>
                 </div>
             </div>
@@ -122,15 +178,13 @@ $post_id = get_the_ID();
         <section class="text-img main-container">
             <div class="text-img__container">
                 <div class="text-img__img">
-                    <img src="<?php echo get_template_directory_uri() . '/img/templates/text-img/img.png'?>" alt="">
+                    <img src="<?php echo the_field('image-beads', $post_id)?>" alt="<?php the_field('title-beads', $post_id)?>">
                 </div>
                 <h2 class="text-img__title section-title">
-                    QC-Beads
+                    <?php the_field('title-beads', $post_id)?>
                 </h2>
                 <div class="text-img__content text">
-                    <p>Quality control (QC) of semen analysis is essential for the detection and correction of systematic errors and high variability.</p>
-                    <p>For manual counting, the QC-Beads can be used to evaluate technician techniques, counting protocols and counting chambers.</p>
-                    <p>For automated counting, the QC-Beads can be used to evaluate the performance of the optical system and the resulting computer image processing of an automated semen analyzer.</p>
+                    <?php the_field('description', $post_id)?>
                 </div>
             </div>
         </section>
