@@ -1,15 +1,35 @@
-<?php
-/**
- * The template for displaying 404 pages (not found)
- *
- * @link https://codex.wordpress.org/Creating_an_Error_404_Page
- *
- * @package akymed
- */
+<!doctype html>
+<html <?php language_attributes(); ?>>
+    <head>
+        <meta charset="<?php bloginfo( 'charset' ); ?>">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;800&display=swap" rel="stylesheet">
+        <script
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQ_Q9f_bDGGDLjUQZOClHEiLhFnE3RIog"
+                defer
+        ></script>
 
-get_header();
-?>
+        <?php wp_head(); ?>
+    </head>
+    <script>
+        window.onload = function () {
+            document.body.classList.add('loaded_hiding');
+            window.setTimeout(function () {
+                document.body.classList.add('loaded');
+                document.body.classList.remove('loaded_hiding');
+            }, 500);
 
+        }
+    </script>
+<body <?php body_class(); ?>>
+<div class="preloader">
+    <div class="preloader__row">
+        <div class="preloader__item"></div>
+        <div class="preloader__item"></div>
+    </div>
+</div>
 	<main id="main" class="main">
         <div class="page-404">
             <div class="container container-star">
@@ -149,12 +169,12 @@ get_header();
                         </div>
                         <div class="number">4</div>
                     </div>
-                    <div class="subtitle">УПС! Неверно указана страница</div>
-                    <a class="button-404" href="<?php echo url('/');?>">На главную</a>
+                    <div class="subtitle">Page not found!!!</div>
+                    <a class="button-404" href="<?php echo get_home_url()?>">To main</a>
                 </div>
             </div>
         </div>
     </main><!-- #main -->
 
 <?php
-get_footer();
+//get_footer();

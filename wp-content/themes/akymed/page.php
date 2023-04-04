@@ -83,10 +83,24 @@ $post_id = get_the_ID();
                                                 while( have_rows('tags_list') ) : the_row();
                                                     $tag = get_sub_field('tag');
                                                     $color = get_sub_field('tag_color');
+                                                    $lnk = get_sub_field('tag-lnk');;
                                                     ?>
-                                                    <div class="reasons-main__tags-item" style="background-color: <?php echo $color?>;">
-                                                        <?php echo $tag?>
-                                                    </div>
+                                                <?php
+                                                    if($lnk){
+                                                        ?>
+                                                        <a href="<?php echo $lnk?>" class="reasons-main__tags-item" style="background-color: <?php echo $color?>;" target="_blank">
+                                                            <?php echo $tag?>
+                                                        </a>
+                                                        <?php
+                                                    } else {
+                                                        ?>
+                                                        <div class="reasons-main__tags-item" style="background-color: <?php echo $color?>;">
+                                                            <?php echo $tag?>
+                                                        </div>
+                                                        <?php
+                                                    }
+                                                ?>
+
                                                 <?php
                                                 endwhile;
                                             endif;
