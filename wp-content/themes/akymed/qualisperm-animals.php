@@ -19,7 +19,18 @@ $post_id = get_the_ID();
 	<main id="main" class="main">
         <section class="banner-grid">
             <div class="banner-grid__bg">
-                <img src="<?php echo get_template_directory_uri() . '/img/templates/banner-grid/bg.jpg'?>" alt="">
+                <?php
+                    if (get_field('banner_custom_image', $post_id)){
+                        ?>
+                        <img src="<?php echo the_field('banner_custom_image', $post_id)?>" alt="<?php the_field('title_banner', $post_id)?>">
+                        <?php
+                    } else {
+                        ?>
+                            <img src="<?php echo get_template_directory_uri() . '/img/templates/banner-grid/bg.jpg'?>" alt="<?php the_field('title_banner', $post_id)?>">
+                        <?php
+                    }
+                ?>
+
             </div>
             <div class="banner-grid__container main-container">
                 <h1 class="banner-grid-title__title banner-title">
