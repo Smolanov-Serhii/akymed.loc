@@ -23,6 +23,7 @@
     right: 0;
     bottom: 0;
     width: 617vw * $px;
+    pointer-events: none;
     @media all and (max-width: 768px){
       position: static;
       width: auto;
