@@ -10,7 +10,6 @@
  */
 
 ?>
-
 	<footer id="footer" class="footer">
         <div class="footer__container main-container">
             <div class="footer__logo">

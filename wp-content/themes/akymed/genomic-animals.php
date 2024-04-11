@@ -12,7 +12,6 @@
  *
  * @package akymed
  */
-
 get_header();
 $post_id = get_the_ID();
 ?>

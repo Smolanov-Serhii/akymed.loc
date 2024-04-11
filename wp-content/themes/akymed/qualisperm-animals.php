@@ -12,7 +12,6 @@
  *
  * @package akymed
  */
-
 get_header();
 $post_id = get_the_ID();
 ?>
@@ -30,7 +29,6 @@ $post_id = get_the_ID();
                         <?php
                     }
                 ?>
-
             </div>
             <div class="banner-grid__container main-container">
                 <h1 class="banner-grid-title__title banner-title">

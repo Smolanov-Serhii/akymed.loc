@@ -22,7 +22,6 @@
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQ_Q9f_bDGGDLjUQZOClHEiLhFnE3RIog"
             defer
     ></script>
-
 	<?php wp_head(); ?>
 </head>
 <script>

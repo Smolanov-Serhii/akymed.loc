@@ -12,7 +12,6 @@
  *
  * @package akymed
  */
-
 get_header();
 $post_id = get_the_ID();
 ?>
@@ -144,17 +143,6 @@ $post_id = get_the_ID();
                     </div>
                 </div>
             </div>
-            <?php
-            if (get_field('button-url', $post_id)){
-                ?>
-                    <div class="table__block-button">
-                        <a href="<?php the_field('button-url', $post_id)?>" class="button button-green">
-                            <span><?php the_field('button_name', $post_id)?></span>
-                        </a>
-                    </div>
-                <?php
-            }
-            ?>
 
         </section>
         <section class="text-img main-container">
@@ -169,9 +157,19 @@ $post_id = get_the_ID();
                     <?php the_field('description', $post_id)?>
                 </div>
             </div>
+            <?php
+            if (get_field('button-url', $post_id)){
+                ?>
+                <div class="table__block-button">
+                    <a href="<?php the_field('button-url', $post_id)?>" class="button button-green">
+                        <span><?php the_field('button_name', $post_id)?></span>
+                    </a>
+                </div>
+                <?php
+            }
+            ?>
         </section>
         <?php get_template_part( 'template-parts/content', 'request' ); ?>
-
 	</main>
 <?php
 get_footer();

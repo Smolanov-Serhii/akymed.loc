@@ -22,6 +22,7 @@
             }, 500);
 
         }
+
     </script>
 <body <?php body_class(); ?>>
 <div class="preloader">
