@@ -94,7 +94,7 @@ $post_id = get_the_ID();
                         while( have_rows('features_list', $post_id) ) : the_row();
                             $title = get_sub_field('title-item');
                             $desc = get_sub_field('description-item');
-                            if($counter == 1 || $counter == 6){
+                            if($counter == 1 || $counter == 5){
                                 echo '<div class="features__list-wrapper">';
                             }
                             ?>
@@ -110,7 +110,7 @@ $post_id = get_the_ID();
                                 </div>
                             </div>
                             <?php
-                            if($counter == 5 || $counter == 9){
+                            if($counter == 4 || $counter == 9){
                                 echo '</div>';
                             }
                             $counter ++;

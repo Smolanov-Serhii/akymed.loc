@@ -35,12 +35,12 @@
     }
 </script>
 <body <?php body_class(); ?>>
-<div class="preloader">
-    <div class="preloader__row">
-        <div class="preloader__item"></div>
-        <div class="preloader__item"></div>
-    </div>
-</div>
+<!--<div class="preloader">-->
+<!--    <div class="preloader__row">-->
+<!--        <div class="preloader__item"></div>-->
+<!--        <div class="preloader__item"></div>-->
+<!--    </div>-->
+<!--</div>-->
 <?php wp_body_open(); ?>
 <div id="page" class="site">
 	<header id="header" class="header default">
