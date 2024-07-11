@@ -59,17 +59,20 @@ body.single-news{
               background-repeat: no-repeat;
               background-size: contain;
               background-position: center;
+              span{
+                display: none;
+              }
               &.a2a_button_facebook{
-                background-image: url("../../img/facebook.svg");
+                background-image: url("../../img/facebook.svg") !important;
               }
               &.a2a_button_twitter{
-                background-image: url("../../img/tweet.svg");
+                background-image: url("../../img/tweet1.svg") !important;
               }
               &.a2a_button_whatsapp{
-                background-image: url("../../img/whats.svg");
+                background-image: url("../../img/whats.svg") !important;
               }
               &.a2a_button_linkedin{
-                background-image: url("../../img/in.svg");
+                background-image: url("../../img/in.svg") !important;
               }
               &.addtoany_share{
                 display: none!important;

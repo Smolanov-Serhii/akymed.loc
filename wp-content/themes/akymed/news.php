@@ -34,9 +34,9 @@ $post_id = get_the_ID();
                                 <?php the_post_thumbnail('medium')?>
                             </a>
                             <a href="<?php the_permalink();?>">
-                                <span class="date">
-                                    <?php echo get_the_date(); ?>
-                                </span>
+<!--                                <span class="date">-->
+<!--                                    --><?php //echo get_the_date(); ?>
+<!--                                </span>-->
                                 <h2><?php the_title();?></h2>
                                 <?php the_excerpt();?>
                             </a>
