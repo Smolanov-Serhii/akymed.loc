@@ -1,5 +1,5 @@
 <?php
-/* Template Name: News */
+/* Template Name: Blog */
 get_header();
 $post_id = get_the_ID();
 ?>
@@ -18,15 +18,15 @@ $post_id = get_the_ID();
         <section class="news">
             <div class="news__container main-container">
                 <div class="news__tabs">
-                    <?php echo do_shortcode( '[searchandfilter id="653"]' ); ?>
+                    <?php echo do_shortcode( '[searchandfilter id="656"]' ); ?>
                 </div>
                 <div class="news__list" id="news-result">
                     <?php
-                    $posts = 'news';
+                    $posts = 'blog';
                     $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
                     $args = array(
                         'post_type' 	 => $posts,
-                        'search_filter_id' => 653,
+                        'search_filter_id' => 656,
                         'orderby' => "menu_order",
                         'paged'	         => $paged
                     );
@@ -46,6 +46,14 @@ $post_id = get_the_ID();
                                     <span class="date">
                                         <?php echo get_field('subtitle-banner', $innerId) ?>
                                     </span>
+<!--                                    --><?php
+//                                    $cur_terms = get_the_terms( $post->ID, 'blog_category' );
+//                                    if( is_array( $cur_terms ) ){
+//                                        foreach( $cur_terms as $cur_term ){
+//                                            echo $cur_term->name;
+//                                        }
+//                                    }
+//                                    ?>
                                     <?php
                                 }?>
 
