@@ -1,6 +1,7 @@
 @import "normalize";
 @import "aos";
 @import "default";
+@import "swiper-bundle";
 $transition: 0.2s;
 $px: 0.052083333333333;
 $pxm: 0.3125;
@@ -256,6 +257,8 @@ main{
 @import "templates/animation-block";
 @import "templates/single-news";
 @import "templates/news";
+@import "templates/partners";
+@import "templates/distribform";
 
 @import "templates/footer";
 

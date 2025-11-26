@@ -31,8 +31,9 @@ $post_id = get_the_ID();
             <?php echo do_shortcode('[contact-form-7 id="89" title="contacts page"]');?>
             <div class="contacts__container contacts__bottom">
                 <div class="main-container">
-                    <div class="contacts__map" id="map" data-aos="fade-up" data-aos-delay="600" data-marker="<?php echo get_template_directory_uri() . '/img/templates/map/marker.svg'?>">
-
+<!--                    #map-->
+                    <div class="contacts__map" id="mapstat" data-aos="fade-up" data-aos-delay="600" data-marker="<?php echo get_template_directory_uri() . '/img/templates/map/marker.svg'?>">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4528.087486200363!2d6.207178844958625!3d46.36102731575131!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478c5d458a986dfd%3A0xdd41edaea06781f5!2zQ2hlbS4gZGUgVHJlcG9teSwgMTI5OSBDcmFucyAoVkQpLCDQqNCy0LXQudGG0LDRgNC40Y8!5e1!3m2!1sru!2sbg!4v1764179285565!5m2!1sru!2sbg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                     <div class="contacts__links">
                         <div class="wrapper">
