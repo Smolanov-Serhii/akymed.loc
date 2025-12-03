@@ -40,6 +40,7 @@
         width: 405px;
         opacity: 0;
         pointer-events: none;
+        display: none;
         @media all and (max-width: 1200px){
           padding: 14px 20px 10px 20px;
         }
@@ -54,6 +55,7 @@
         &.is-active{
           opacity: 1;
           pointer-events: auto;
+          display: block;
         }
         .country{
           font-size: 16px;

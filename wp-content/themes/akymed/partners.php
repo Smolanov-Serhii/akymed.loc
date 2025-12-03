@@ -231,6 +231,17 @@ $post_id = get_the_ID();
                     });
                 });
             });
+
+            document.addEventListener('click', function (e) {
+                if (
+                    e.target.closest('.partners__map-item') ||
+                    e.target.closest('.partners__map-item-desc')
+                ) {
+                    return;
+                }
+
+                deactivateAll();
+            });
         });
     </script>
 
