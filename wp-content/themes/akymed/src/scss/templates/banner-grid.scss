@@ -7,13 +7,18 @@
   }
   &__subtitle{
     color: #FFFFFF;
-    max-width: 64.3rem;
+    //max-width: 64.3rem;
     margin: auto;
     span{
       display: block;
       text-align: center;
       margin-bottom: 1.4rem;
     }
+  }
+  &__excerpt{
+    margin-top: 2.8rem;
+    padding: 20px;
+
   }
   &__bg{
     position: absolute;

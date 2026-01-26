@@ -35,6 +35,13 @@ $post_id = get_the_ID();
                     <?php the_field('title_banner', $post_id)?>
                 </h1>
                 <p class="banner-grid__subtitle banner-subtitle"><?php the_field('subtitle-banner', $post_id)?></p>
+                <?php
+                if (get_field('block-exerpt', $post_id)){
+                    ?>
+                    <p class="banner-grid__excerpt banner-excerpt"><?php the_field('block-exerpt', $post_id)?></p>
+                    <?php
+                }
+                ?>
             </div>
             <h2 class="banner-grid__list">
                 <?php the_field('main_modules_title', $post_id)?>
