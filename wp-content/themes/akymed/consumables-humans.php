@@ -33,6 +33,13 @@ $post_id = get_the_ID();
                         <?php the_field('titletable', $post_id)?>
                     </h2>
                     <p class="table__subtitle section-subtitle"><?php the_field('subtitle-table', $post_id)?></p>
+                    <?php
+                    if (get_field('block-exerpt', $post_id)){
+                        ?>
+                        <p class="banner-grid__excerpt banner-excerpt"><?php the_field('block-exerpt', $post_id)?></p>
+                        <?php
+                    }
+                    ?>
                     <div class="table__img">
                         <img src="<?php the_field('block_image', $post_id)?>" alt="<?php the_field('titletable', $post_id)?>">
                     </div>

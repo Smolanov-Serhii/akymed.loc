@@ -156,6 +156,8 @@ main{
   background: rgba(0, 36, 65, 0.85);
   color: #FFF;
   font-size: 1.6rem;
+  position: relative;
+  text-align: center;
   @media all and (max-width: 500px){
     font-size: 13px;
   }

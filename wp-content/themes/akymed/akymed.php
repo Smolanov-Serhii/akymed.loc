@@ -30,6 +30,13 @@ $post_id = get_the_ID();
                         <?php the_field('title', $post_id)?>
                     </h1>
                     <p class="banner-double__subtitle section-subtitle"  data-aos="fade-up" data-aos-delay="500"><?php the_field('subtitle', $post_id)?></p>
+                    <?php
+                    if (get_field('block-exerpt', $post_id)){
+                        ?>
+                        <p class="banner-grid__excerpt banner-excerpt"><?php the_field('block-exerpt', $post_id)?></p>
+                        <?php
+                    }
+                    ?>
                 </div>
             </div>
             <div class="banner-double__two"  data-aos="fade-up" data-aos-delay="800">
